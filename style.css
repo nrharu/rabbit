@@ -1,5 +1,8 @@
 html{
   max-width: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  
 }
 li{
   list-style-type: none;
@@ -8,20 +11,26 @@ img{
   max-width: 100%;
 }
 .header{
-  display: flex;
-  justify-content: flex-start;
   width: 100% ;
+  border-style: solid;
+  border-color: pink;
+  border-width: 0 0 1px 0;
+  height: 75px;
 }
 .head{
   width: 70%;
+  display: flex;
+  /* justify-content: flex-start; */
 }
-img.{}
 .navigation{
   display: flex;
-  width: 100%;
+  padding:0;
+  font-size: 15px;
 }
-li~li{
-  margin: 0 30px;
+.mokuzi{
+  /* display: flex; */
+  margin-left: 15px;
+  flex-shrink: 0;
 }
 img.{
   width: 100%;
@@ -35,25 +44,78 @@ img.{
   display:flex;
   justify-content: space-around;
 }
+.tyuumon{
+display: inline-block;
+border-style: solid;
+border-width: 0 0 3px 0;
+border-color: black;
+}
+.miru{
+  display: inline-block;
+  border-style: solid;
+border-width: 0 0 3px 0;
+border-color: black;
+}
+.jyouhou{
+  display: inline-block;
+  border-style: solid;
+border-width: 0 0 3px 0;
+border-color: black;
+}
 .news{
   display:flex;
   justify-content: space-around;
+}
+footer{
+  margin: 0 130px;
 }
 .service{
   display: flex;
   justify-content:center;
  }
-. 返品{
+  .hennpinn{
    margin-right: 20px;
   }
-  . 支払い{
+  .siharai{
     margin-left: 20px;
-   }
-   .フォロー{
+  }
+   .follow{
    display: flex;
-   justify-content: space-around;
+   width: 100%;
+   /* margin: 0 50px; */
   }
-  .登録{
-    
+  .touroku{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex: 1; */
+    width: 50%;
   }
+  .SNS{
+  display: flex;
+   width: 50%;
+  justify-content: space-between;
+  justify-content: flex-start; 
+  /* flex: 1; */
+}
+.sita{
+  display: flex;
+  justify-content: center;
+}
+.name:first-child{
+  border-style: solid;
+  border-color: pink;
+  border-width:0 0 1px 0;
+  padding-bottom: 5px;
+}
+.name{
+  margin-top: 10px;
+}
+.list+.list{
+  margin-right: 20px;
+}
 
+.small{
+  display: flex;
+  justify-content: center;
+}
