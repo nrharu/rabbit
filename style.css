@@ -1,42 +1,42 @@
-html{
+html {
   max-width: 100%;
   font-size: 100%;
   box-sizing: border-box;
 }
-li{
+li {
   list-style-type: none;
 }
-img{
+img {
   max-width: 100%;
 }
-.header{
-  width: 100% ;
+.header {
+  width: 100%;
   border-style: solid;
   border-color: pink;
   border-width: 0 0 1px 0;
   height: 75px;
   /* position: fixed; */
 }
-.logo{
-height: 70px; 
-width: 160px;
-object-fit:cover ;
+.logo {
+  height: 70px;
+  width: 160px;
+  object-fit: cover;
 }
-.mind{
+.mind {
   margin-top: 20px;
   position: relative;
 }
-.head{
+.head {
   width: 70%;
   display: flex;
   /* justify-content: flex-start; */
 }
-.navigation{
+.navigation {
   display: flex;
-  padding: 10px; 0 0 0;
+  padding: 10px 0 0 0;
   font-size: 15px;
 }
-.mokuzi{
+.mokuzi {
   /* display: flex; */
   margin-left: 15px;
   flex-shrink: 0;
@@ -44,169 +44,168 @@ object-fit:cover ;
 /* .mokuzi:hover{
   background-color: chartreuse;
 } */
-.mainvisual{
-height: 700px;
-width: 100%;
-object-fit: cover;
+.mainvisual {
+  height: 700px;
+  width: 100%;
+  object-fit: cover;
 }
-.label2{
- position: absolute;
- background-color: blanchedalmond;
- bottom:70px ;
- right: 400px; ;
- padding: 5px 20px;
+.label2 {
+  position: absolute;
+  background-color: blanchedalmond;
+  bottom: 70px;
+  right: 400px;
+  padding: 5px 20px;
 }
-.label{
+.label {
   position: absolute;
   background-color: blanchedalmond;
   bottom: 70px;
   left: 400px;
-  padding:5px 20px ;
+  padding: 5px 20px;
 }
-.tyou{
+.tyou {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .itemlist {
-  display:flex;
+  display: flex;
   justify-content: space-around;
 }
-.gotyuumonn{
-display: block;
-width:200px ;
-height:280px ;
-object-fit: cover;
+.gotyuumonn {
+  display: block;
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
 }
-.collection{
-  display:flex;
+.collection {
+  display: flex;
   justify-content: space-around;
 }
-.tyuumon{
-display: inline-block;
-display: flex;
-justify-content: center;
-border-style: solid;
-border-width: 0 0 3px 0;
-border-color: black;
+.tyuumon {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0 0 3px 0;
+  border-color: black;
 }
-.collect{
-display: block;
-width:600px ;
-height:750px ;
-object-fit: cover;
+.collect {
+  display: block;
+  width: 600px;
+  height: 750px;
+  object-fit: cover;
 }
-.text{
+.text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.miru{
+.miru {
   display: inline-block;
   display: flex;
   justify-content: center;
   border-style: solid;
-border-width: 0 0 3px 0;
-border-color: black;
+  border-width: 0 0 3px 0;
+  border-color: black;
 }
-.big{
+.big {
   display: block;
   width: 350px;
   height: 320px;
   object-fit: cover;
 }
-.jyouhou{
+.jyouhou {
   display: inline-block;
   border-style: solid;
-border-width: 0 0 3px 0;
-border-color: black
+  border-width: 0 0 3px 0;
+  border-color: black;
 }
-.maison{
+.maison {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 0;
 }
-.news{
-  display:flex;
+.news {
+  display: flex;
   justify-content: space-around;
 }
-footer{
+footer {
   margin: 0 130px;
 }
-.service{
-  display: flex;
-  justify-content:center;
- }
- .server{
-width:250px ;
-height: 80px;
-object-fit: cover;
- }
-  .hennpinn+.hennpinn{
-   margin-left: 20px;
-  }
-   .follow{
-   display: flex;
-   width: 100%;
-   /* margin: 0 50px; */
-  }
-  .siharai{
-    display: flex;
-    justify-content: center;
-  }
-  .bun{
-    flex:1;
-  }
-  .touroku{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-  }
-    .suru{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    width: 180px;
-    height: 50px;
-   
-  }
-  .suru:hover{
-   background-color: rgb(0, 0, 0);
-   color: blanchedalmond;
-   border-style: solid;
-   border-width: 1px;
-  }
-  .SNS{
-  display: flex;
-  justify-content: space-between;
-  justify-content: flex-start; 
-
-  flex: 1;
-}
-.sita{
+.service {
   display: flex;
   justify-content: center;
 }
-.name:first-child{
+.server {
+  width: 250px;
+  height: 80px;
+  object-fit: cover;
+}
+.hennpinn + .hennpinn {
+  margin-left: 20px;
+}
+.follow {
+  display: flex;
+  width: 100%;
+  /* margin: 0 50px; */
+}
+.siharai {
+  display: flex;
+  justify-content: center;
+}
+.bun {
+  flex: 1;
+}
+.touroku {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.suru {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+}
+.suru:hover {
+  background-color: rgb(0, 0, 0);
+  color: blanchedalmond;
+  border-style: solid;
+  border-width: 1px;
+}
+.SNS {
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-start;
+
+  flex: 1;
+}
+.sita {
+  display: flex;
+  justify-content: center;
+}
+.name:first-child {
   border-style: solid;
   border-color: pink;
-  border-width:0 0 1px 0;
+  border-width: 0 0 1px 0;
   padding-bottom: 5px;
 }
-.name{
+.name {
   margin-top: 10px;
 }
-.list+.list{
+.list + .list {
   margin-right: 20px;
 }
 
-.small{
+.small {
   display: flex;
   justify-content: center;
 }
