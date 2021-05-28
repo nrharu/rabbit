@@ -8,28 +8,38 @@ li {
 }
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 .header {
   width: 100%;
-  border-style: solid;
-  border-color: pink;
-  border-width: 0 0 1px 0;
   height: 75px;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 10;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgb(146, 139, 139);
 }
 .logo {
-  height: 70px;
+  height: 75px;
   width: 160px;
   object-fit: cover;
 }
-.mind {
-  margin-top: 20px;
+.box ::before {
+  content: ;
   position: relative;
+  padding-top: 100%;
+}
+.mind {
+  position: relative;
+  width: 100%;
 }
 .head {
   width: 70%;
   display: flex;
-  /* justify-content: flex-start; */
 }
 .navigation {
   display: flex;
@@ -41,37 +51,54 @@ img {
   margin-left: 15px;
   flex-shrink: 0;
 }
-/* .mokuzi:hover{
-  background-color: chartreuse;
-} */
+
 .mainvisual {
   height: 700px;
   width: 100%;
   object-fit: cover;
 }
-.label2 {
-  position: absolute;
-  background-color: blanchedalmond;
-  bottom: 70px;
-  right: 400px;
-  padding: 5px 20px;
-}
 .label {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
   position: absolute;
+  bottom: 35px;
+}
+.label2 {
   background-color: blanchedalmond;
-  bottom: 70px;
-  left: 400px;
-  padding: 5px 20px;
+  padding: 10px 20px;
+}
+.label1 {
+  background-color: blanchedalmond;
+  padding: 10px 20px;
 }
 .tyou {
-  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
+/* .tyou ::before {
+  content: ;
+  padding-top: 100%;
+  position: relative;
+} */
 .itemlist {
   display: flex;
   justify-content: space-around;
+}
+.itemlist ::before {
+  content: ;
+  padding-top: 100%;
+  position: relative;
 }
 .gotyuumonn {
   display: block;
@@ -79,10 +106,19 @@ img {
   height: 280px;
   object-fit: cover;
 }
-.collection {
+/* .box2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 .tyuumon {
   display: inline-block;
   display: flex;
@@ -90,6 +126,10 @@ img {
   border-style: solid;
   border-width: 0 0 3px 0;
   border-color: black;
+}
+.collection {
+  display: flex;
+  justify-content: space-around;
 }
 .collect {
   display: block;
@@ -140,14 +180,39 @@ footer {
 .service {
   display: flex;
   justify-content: center;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: rgb(160, 146, 146);
+  margin: 15px 0;
 }
 .server {
   width: 250px;
   height: 80px;
   object-fit: cover;
 }
-.hennpinn + .hennpinn {
-  margin-left: 20px;
+
+.hennpinn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 24px;
+}
+.hennpinn1 {
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: rgb(160, 146, 146);
+}
+.hennpinn2 {
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: rgb(160, 146, 146);
+}
+.hennpinn3 {
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: rgb(160, 146, 146);
 }
 .follow {
   display: flex;
@@ -208,4 +273,19 @@ footer {
 .small {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 744px) {
+  .header {
+    background-color: chartreuse;
+  }
+  .itemlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
