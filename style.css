@@ -116,11 +116,11 @@ img {
 }
 
 .label2 {
-  background-color: blanchedalmond;
+  background-color: #e9eaea;
   padding: 10px 20px;
 }
 .label1 {
-  background-color: blanchedalmond;
+  background-color: #e9eaea;
   padding: 10px 20px;
 }
 .tyou {
@@ -129,10 +129,11 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
-.tyou ~ .tyou {
+/* .tyou ~ .tyou {
   padding: 0 20px;
-}
+} */
 .itemlist {
   display: flex;
   justify-content: space-around;
@@ -167,7 +168,7 @@ img {
 .text1 {
   padding: 0 5px 0 10px;
 }
-.text {
+.text2 {
   box-sizing: none;
   display: flex;
   flex-direction: column;
@@ -222,7 +223,7 @@ footer {
   border-style: solid;
   border-width: 1px 0;
   border-color: rgb(160, 146, 146);
-  margin: 15px 0;
+  margin: 50px 0;
 }
 .server {
   width: 250px;
@@ -256,26 +257,34 @@ footer {
 .follow {
   display: flex;
   width: 100%;
-  margin: 30px 0 20px 0;
+  margin: 70px 0 40px 0;
 }
 .siharai {
   display: flex;
   justify-content: center;
 }
+.letter {
+  font-size: 12px;
+}
 .bun {
-  flex: 1;
+  width: 50%;
 }
 .touroku {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex: 1;
+  width: 50%;
+}
+.tou {
+  margin-left: 120px;
 }
 .suru {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   width: 180px;
   height: 50px;
 }
@@ -288,13 +297,12 @@ footer {
 .SNS {
   display: flex;
   justify-content: space-between;
-  justify-content: flex-start;
-
-  flex: 1;
+  /* justify-content: flex-start; */
 }
 .sita {
   display: flex;
   justify-content: center;
+  margin: 60px 0;
 }
 .name:first-child {
   border-style: solid;
@@ -306,12 +314,13 @@ footer {
   margin-top: 10px;
 }
 .list + .list {
-  margin-right: 20px;
+  margin-left: 40px;
 }
 
 .small {
   display: flex;
   justify-content: center;
+  font-size: 12pxs;
 }
 @media (max-width: 744px) {
   .header {
