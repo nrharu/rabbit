@@ -1,6 +1,11 @@
 html {
+  width: 100%;
   max-width: 100%;
+  min-width: 350px;
   font-size: 100%;
+  box-sizing: border-box;
+}
+* {
   box-sizing: border-box;
 }
 li {
@@ -8,88 +13,171 @@ li {
 }
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.body {
+  width: 100%;
+}
+.main {
+  padding-top: 75px;
 }
 .header {
   width: 100%;
-  border-style: solid;
-  border-color: pink;
-  border-width: 0 0 1px 0;
   height: 75px;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgb(146, 139, 139);
+}
+.bed {
+  display: flex;
+}
+.bon {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .logo {
-  height: 70px;
+  height: 75px;
   width: 160px;
   object-fit: cover;
 }
-.mind {
-  margin-top: 20px;
-  position: relative;
+.botan {
+  display: flex;
 }
 .head {
-  width: 70%;
+  width: 50%;
+  height: 100%;
   display: flex;
-  /* justify-content: flex-start; */
+  justify-content: flex-start;
+}
+.nav {
+  display: flex;
+  align-items: center;
 }
 .navigation {
   display: flex;
-  padding: 10px 0 0 0;
-  font-size: 15px;
+  justify-content: space-around;
+  width: 100%;
 }
 .mokuzi {
   /* display: flex; */
   margin-left: 15px;
   flex-shrink: 0;
+  font-size: clamp(12px, 1vw, 16px);
 }
-/* .mokuzi:hover{
-  background-color: chartreuse;
-} */
+
+.box1 {
+  position: relative;
+  width: 100%;
+}
+.mind::before {
+  padding-top: 39.83333%;
+  content: "";
+  display: block;
+}
+.mind {
+  width: 100%;
+  position: relative;
+}
 .mainvisual {
-  height: 700px;
+  /* height: 700px; */
   width: 100%;
   object-fit: cover;
-}
-.label2 {
+  max-height: 700px;
   position: absolute;
-  background-color: blanchedalmond;
-  bottom: 70px;
-  right: 400px;
-  padding: 5px 20px;
+  top: 0;
+  /* bottom: 0; */
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .label {
+  width: 50%;
   position: absolute;
-  background-color: blanchedalmond;
-  bottom: 70px;
-  left: 400px;
-  padding: 5px 20px;
+  top: 0;
+  bottom: 0;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.label2 {
+  background-color: #e9eaea;
+  padding: 10px 20px;
+}
+.label1 {
+  background-color: #e9eaea;
+  padding: 10px 20px;
 }
 .tyou {
+  object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
+/* .tyou ~ .tyou {
+  padding: 0 20px;
+} */
 .itemlist {
   display: flex;
   justify-content: space-around;
+  padding: 50px 0;
+}
+.mon ::before {
+  padding-top: 77.503021%;
+  content: "";
+  display: block;
+}
+.mon {
+  position: relative;
+}
+.die {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .gotyuumonn {
-  display: block;
-  width: 200px;
-  height: 280px;
+  max-width: 267.19px;
+  max-height: 344.75px;
   object-fit: cover;
-}
-.collection {
-  display: flex;
-  justify-content: space-around;
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
 }
 .tyuumon {
-  display: inline-block;
+  display: inline;
   display: flex;
   justify-content: center;
   border-style: solid;
   border-width: 0 0 3px 0;
   border-color: black;
+  padding-top: 10px;
+  flex-grow: 0;
+}
+.collection {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 80px;
 }
 .collect {
   display: block;
@@ -97,19 +185,25 @@ img {
   height: 750px;
   object-fit: cover;
 }
-.text {
+.text1 {
+  padding: 0 5px 0 10px;
+}
+.text2 {
+  box-sizing: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10px 0 5px;
 }
 .miru {
-  display: inline-block;
+  display: inline;
   display: flex;
   justify-content: center;
   border-style: solid;
   border-width: 0 0 3px 0;
   border-color: black;
+  padding-top: 10px;
 }
 .big {
   display: block;
@@ -118,21 +212,27 @@ img {
   object-fit: cover;
 }
 .jyouhou {
-  display: inline-block;
+  /* display: inline-block; */
   border-style: solid;
   border-width: 0 0 3px 0;
   border-color: black;
+  padding-top: 10px;
+}
+.heading {
+  white-space: nowrap;
+  padding-bottom: 10px;
 }
 .maison {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  flex-grow: 0;
+  /* flex-grow: 0; */
 }
 .news {
   display: flex;
   justify-content: space-around;
+  padding: 0;
 }
 footer {
   margin: 0 130px;
@@ -140,38 +240,71 @@ footer {
 .service {
   display: flex;
   justify-content: center;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: rgb(160, 146, 146);
+  margin: 50px 0;
 }
 .server {
   width: 250px;
   height: 80px;
   object-fit: cover;
 }
-.hennpinn + .hennpinn {
-  margin-left: 20px;
+
+.hennpinn {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0 20px;
+  margin: 24px 0;
+}
+.hennpinn1 {
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: rgb(160, 146, 146);
+}
+.hennpinn2 {
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: rgb(160, 146, 146);
+}
+.hennpinn3 {
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: rgb(160, 146, 146);
 }
 .follow {
   display: flex;
   width: 100%;
-  /* margin: 0 50px; */
+  margin: 70px 0 40px 0;
 }
 .siharai {
   display: flex;
   justify-content: center;
 }
+.letter {
+  font-size: 12px;
+}
 .bun {
-  flex: 1;
+  width: 50%;
 }
 .touroku {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex: 1;
+  width: 50%;
+}
+.tou {
+  margin-left: 120px;
 }
 .suru {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   width: 180px;
   height: 50px;
 }
@@ -184,13 +317,12 @@ footer {
 .SNS {
   display: flex;
   justify-content: space-between;
-  justify-content: flex-start;
-
-  flex: 1;
+  /* justify-content: flex-start; */
 }
 .sita {
   display: flex;
   justify-content: center;
+  margin: 60px 0;
 }
 .name:first-child {
   border-style: solid;
@@ -202,10 +334,50 @@ footer {
   margin-top: 10px;
 }
 .list + .list {
-  margin-right: 20px;
+  margin-left: 40px;
 }
 
 .small {
   display: flex;
   justify-content: center;
+  font-size: 12pxs;
 }
+@media (max-width: 744px) {
+  .header {
+    background-color: chartreuse;
+  }
+  .itemlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin-right: 10px;
+  }
+  .text {
+    padding-top: 20px;
+  }
+  .news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .touroku {
+    display: flex;
+    flex-direction: column;
+  }
+  .sita {
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* 1024px */
