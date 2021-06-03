@@ -163,33 +163,54 @@ img {
 }
 .collection {
   display: flex;
-  justify-content: space-around;
-  padding: 350px 0 80px 0;
+  justify-content: space-between;
+  padding: 50px 0 80px 0;
 }
 .collect {
-  display: block;
-  width: 600px;
-  height: 750px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .text1 {
-  padding: 0 5px 0 10px;
+  flex: 1;
 }
 .text2 {
-  box-sizing: none;
+  /* box-sizing: none; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px 0 5px;
+  padding-left: 10px;
+  flex: 1;
 }
 .text {
   padding: 0 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.whatch::before {
+  display: block;
+  padding-top: 129.411765%;
+  content: "";
+}
+.whatch {
+  position: relative;
+  width: 100%;
 }
 .miru {
-  display: inline;
+  /* display: inline;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
   border-style: solid;
   border-width: 0 0 3px 0;
   border-color: black;
