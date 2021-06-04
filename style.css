@@ -235,9 +235,9 @@ img {
 .heading {
   /* white-space: nowrap; */
   padding-bottom: 10px;
-  font-size: clamp(28px, 1vw, 34px);
-  white-space: nowrap;
+  font-size: ;
 }
+
 .pin::before {
   padding-top: 100%;
   display: block;
@@ -321,7 +321,7 @@ footer {
 .follow {
   display: flex;
   width: 100%;
-  margin: 70px 0 40px 0;
+  margin: 70px 20px 40px 20px;
 }
 .siharai {
   display: flex;
@@ -329,6 +329,7 @@ footer {
 }
 .letter {
   font-size: 12px;
+  padding-bottom: 10px;
 }
 .bun {
   width: 50%;
@@ -344,22 +345,20 @@ footer {
   border-width: 1px;
   border-color: #dedede; */
 }
-.tou {
-  margin-left: 120px;
-}
 .suru {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  width: 180px;
-  height: 50px;
+  width: 35.53299492%;
+  height: 54.07597675%;
   border-style: solid;
   border-width: 1px;
   border-color: #dedede;
   color: black;
   text-decoration: none;
   transition: 1;
+  font-size: 1.102687802vw;
 }
 .suru:hover {
   background-color: rgb(0, 0, 0);
@@ -399,27 +398,58 @@ footer {
   .header {
     background-color: chartreuse;
   }
+  .mon::before {
+    display: none;
+  }
+  .gotyuumonn {
+    position: static;
+  }
   .itemlist {
+    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .tyou {
+    display: block;
+  }
+  .text2 {
+    padding-top: 10px;
+  }
+  .collect {
+    width: 345px;
+    height: 375px;
   }
   .collection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
-    margin-right: 10px;
+    /* padding-top: 10px;
+    margin-right: 10px; */
   }
-  .text {
-    padding-top: 20px;
+  .whatch::before {
+    display: none;
   }
+  .collect {
+    position: static;
+    /* top: auto;
+    left: auto;
+    right: auto; */
+  }
+
   .news {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
   }
+  .pin::before {
+    display: none;
+  }
+  .big {
+    position: static;
+  }
+
   .touroku {
     display: flex;
     flex-direction: column;
