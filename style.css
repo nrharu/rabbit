@@ -4,6 +4,7 @@ html {
   min-width: 350px;
   font-size: 100%;
   box-sizing: border-box;
+  padding: 0 auto;
 }
 * {
   box-sizing: border-box;
@@ -72,7 +73,7 @@ img {
   height: 20px;
 }
 .logo {
-  height: 55px;
+  height: 80px;
   width: 140px;
   object-fit: cover;
 }
@@ -392,6 +393,9 @@ footer {
   border-width: 1px;
   border-color: #dedede; */
 }
+.hover {
+  display: flex;
+}
 .suru {
   display: flex;
   justify-content: center;
@@ -406,8 +410,14 @@ footer {
   text-decoration: none;
   transition: 1;
   font-size: 14px;
+  /* flex: 5.2; */
 }
-.suru:hover {
+.yazi {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+.hover:hover {
   background-color: rgb(0, 0, 0);
   color: blanchedalmond;
   border-style: solid;
@@ -541,6 +551,9 @@ footer {
   .header {
     height: 55px;
   }
+  .main {
+    height: 55px;
+  }
   .nav {
     display: none;
   }
@@ -555,6 +568,10 @@ footer {
   .bed {
     display: flex;
     justify-content: space-between;
+    height: 55px;
+  }
+  .logo {
+    height: 55px;
   }
   .head {
     flex: 1;
