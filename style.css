@@ -4,7 +4,7 @@ html {
   min-width: 350px;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0 auto;
+  margin: 0 auto;
 }
 * {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ img {
 }
 .body {
   width: 100%;
+  margin: 0 auto;
 }
 .hamburger {
   display: flex;
@@ -39,7 +40,6 @@ img {
 }
 .main {
   padding-top: 81px;
-  max-width: 1420px;
   margin: 0 20px;
 }
 .header {
@@ -76,6 +76,9 @@ img {
   height: 80px;
   width: 140px;
   object-fit: cover;
+}
+.ka {
+  display: none;
 }
 .ta {
   height: 80px;
@@ -395,34 +398,46 @@ footer {
 }
 .hover {
   display: flex;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  width: 250px;
+  justify-content: center;
 }
 .suru {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  width: 210px;
+  /* margin-top: 10px; */
+  width: 250px;
   height: 40px;
-  border-style: solid;
+  /* padding: 0 0 0 30px; */
+  /* border-style: solid;
   border-width: 1px;
-  border-color: #dedede;
+  border-color: #dedede; */
   color: black;
   text-decoration: none;
   transition: 1;
   font-size: 14px;
-  /* flex: 5.2; */
+  text-align: center;
 }
-.yazi {
-  width: 40px;
-  height: 40px;
-  margin-top: 20px;
-}
-.hover:hover {
+.suru:hover {
   background-color: rgb(0, 0, 0);
-  color: blanchedalmond;
+  color: white;
   border-style: solid;
   border-width: 1px;
+  display: flex;
 }
+.suru::after {
+  content: "hey";
+  margin-left: auto;
+}
+/* .suru:hover {
+  color: white;
+} */
+/* .gazo {
+  margin-top: 10px;
+} */
 .SNS {
   display: flex;
   justify-content: space-between;
@@ -460,6 +475,20 @@ footer {
   }
   .gotyuumonn {
     position: static;
+  }
+  .ta {
+    display: none;
+  }
+  .ka {
+    display: flex;
+  }
+  .label1 {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+  .label2 {
+    padding: 5px 10px;
+    font-size: 8px;
   }
   .itemlists {
     /* display: block; */
