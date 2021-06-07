@@ -39,7 +39,7 @@ img {
   margin-top: 5px;
 }
 .main {
-  padding-top: 81px;
+  padding-top: 83px;
   margin: 0 20px;
 }
 .header {
@@ -420,6 +420,7 @@ footer {
   transition: 1;
   font-size: 14px;
   text-align: center;
+  padding-left: 70px;
 }
 .suru:hover {
   background-color: rgb(0, 0, 0);
@@ -429,8 +430,8 @@ footer {
   display: flex;
 }
 .suru::after {
-  content: "hey";
-  margin-left: auto;
+  content: url(yazi.jpeg);
+  padding-left: 70px;
 }
 /* .suru:hover {
   color: white;
@@ -473,14 +474,11 @@ footer {
   .mon::before {
     display: none;
   }
-  .gotyuumonn {
+  /* .gotyuumonn {
     position: static;
-  }
-  .ta {
-    display: none;
-  }
+  } */
   .ka {
-    display: flex;
+    display: none;
   }
   .label1 {
     padding: 5px 10px;
@@ -507,14 +505,14 @@ footer {
   .text2 {
     padding-top: 10px;
   }
-  .collect {
+  /* .collect {
     width: 345px;
     height: 375px;
   }
   .gotyuumonn {
     width: 272px;
     height: 351px;
-  }
+  } */
   .collection {
     display: flex;
     flex-direction: column;
@@ -524,12 +522,12 @@ footer {
   .whatch::before {
     display: none;
   }
-  .collect {
+  /* .collect {
     position: static;
-    /* top: auto;
+    top: auto;
     left: auto;
-    right: auto; */
-  }
+    right: auto;
+  } */
 
   .news {
     display: flex;
@@ -552,11 +550,11 @@ footer {
   .touroku {
     padding-bottom: 40px;
   }
-  .big {
+  /* .big {
     position: static;
     width: 320px;
     height: 320px;
-  }
+  } */
   .follow {
     flex-direction: column;
   }
@@ -581,7 +579,7 @@ footer {
     height: 55px;
   }
   .main {
-    height: 55px;
+    padding-top: 56px;
   }
   .nav {
     display: none;
