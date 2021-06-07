@@ -165,15 +165,15 @@ img {
   background-color: #e9eaea;
   padding: 10px 20px;
   position: absolute;
-  bottom: 50px;
-  left: 130px;
+  bottom: 10%;
+  left: 15%;
 }
 .label1 {
   background-color: #e9eaea;
   padding: 10px 20px;
   position: absolute;
-  bottom: 50px;
-  right: 130px;
+  bottom: 10%;
+  right: 15%;
 }
 .tyou {
   display: flex;
@@ -329,7 +329,7 @@ img {
   padding-top: 10px;
   font-size: 14px;
 }
-footer {
+.footer {
   margin: 0 130px;
 }
 .service {
@@ -390,6 +390,12 @@ footer {
 }
 .bun {
   width: 50%;
+}
+.apple {
+  height: 45px;
+}
+.mark {
+  width: 100%;
 }
 .touroku {
   display: flex;
@@ -562,6 +568,9 @@ footer {
   } */
   .follow {
     flex-direction: column;
+  }
+  .bun {
+    width: 100%;
   }
   .touroku {
     display: flex;
