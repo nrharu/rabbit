@@ -39,7 +39,7 @@ img {
   margin-top: 5px;
 }
 .main {
-  padding-top: 83px;
+  padding-top: 82px;
   margin: 0 20px;
 }
 .header {
@@ -471,9 +471,9 @@ footer {
   .header {
     background-color: chartreuse;
   }
-  .mon::before {
+  /* .mon::before {
     display: none;
-  }
+  } */
   /* .gotyuumonn {
     position: static;
   } */
@@ -519,9 +519,9 @@ footer {
     align-items: center;
     padding: 0;
   }
-  .whatch::before {
+  /* .whatch::before {
     display: none;
-  }
+  } */
   /* .collect {
     position: static;
     top: auto;
@@ -541,9 +541,9 @@ footer {
   .heading {
     font-size: 22px;
   }
-  .pin::before {
+  /* .pin::before {
     display: none;
-  }
+  } */
   .siharai {
     font-size: 12px;
   }
