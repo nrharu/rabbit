@@ -1,7 +1,12 @@
-$breakpoint: (
-  "sm": "(max-width: 744px)" "md": "(max-width: 1024px)",
+$breakpoint-down: (
+  "xm": "(max-width: 744px)" "sm": "(max-width: 1024px)",
 ) !default;
-@mixin html {
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+html {
   width: 100%;
   max-width: 100%;
   min-width: 350px;
@@ -36,6 +41,9 @@ img {
     border-style: solid;
     border-width: 0 0 1px 0;
     border-color: rgb(146, 139, 139);
+    @include mq-up("sm") {
+      height: 55px;
+    }
     .bed {
       display: flex;
       align-items: center;
@@ -97,7 +105,9 @@ img {
         .botan {
           display: flex;
           .ka {
-            display: none;
+            @include mq-up("xm") {
+              display: none;
+            }
           }
           .ta {
             height: 80px;
@@ -123,6 +133,9 @@ img {
   .main {
     padding-top: 82px;
     margin: 0 20px;
+    @include mq-up("sm") {
+      padding-top: 56px;
+    }
     .box1 {
       position: relative;
       width: 100%;
@@ -152,6 +165,16 @@ img {
         position: absolute;
         top: 0;
         bottom: 0;
+        @include mq-up("xm") {
+          .label1 {
+            padding: 5px 10px;
+            font-size: 8px;
+          }
+          .label2 {
+            padding: 5px 10px;
+            font-size: 8px;
+          }
+        }
         .label2 {
           background-color: #e9eaea;
           padding: 10px 20px;
@@ -177,12 +200,21 @@ img {
     .itemlists {
       display: flex;
       padding: 50px 0;
+      @include mq-up("xm") {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 35px 0 35px;
+      }
       .tyou {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex: 1;
+        @include mq-up("xm") {
+          margin-bottom: 20px;
+          height: 300px;
+        }
         .mon {
           position: relative;
           width: 100%;
@@ -210,6 +242,9 @@ img {
       }
       .tyou + .tyou {
         margin-left: 16px;
+        @include mq-up("xm") {
+          margin-left: 0;
+        }
       }
     }
     .collection {
@@ -218,6 +253,9 @@ img {
       padding: 50px 0 80px 0;
       .text1 {
         flex: 1;
+        @include mq-up("xm") {
+          flex-direction: column;
+        }
       }
       .text2 {
         display: flex;
@@ -226,6 +264,9 @@ img {
         align-items: center;
         padding-left: 10px;
         flex: 1;
+        @include mq-up("xm") {
+          padding-top: 10px;
+        }
       }
       .text {
         padding: 0 20px;
@@ -258,18 +299,25 @@ img {
     }
     .news {
       display: flex;
+      @include mq-up("xm") {
+        flex-direction: column;
+      }
 
       justify-content: space-around;
       .maison {
         display: flex;
         flex-direction: column;
         margin: 0 10px;
-
         align-items: center;
-
+        @include mq-up("xm") {
+          padding: 0 0 20px 0;
+        }
         .heading {
           padding-bottom: 10px;
           font-size: 75%;
+          @include mq-up("xm") {
+            font-size: 22px;
+          }
         }
 
         .pin::before {
@@ -335,6 +383,9 @@ img {
         .siharai {
           display: flex;
           justify-content: center;
+          @include mq-up("xm") {
+            font-size: 12px;
+          }
         }
       }
       .hennpinn2 {
@@ -350,11 +401,12 @@ img {
       .touroku {
         display: flex;
         flex-direction: column;
-
         justify-content: center;
         flex: 1;
         width: 50%;
-
+        @include mq-up("xm") {
+          flex-direction: column;
+        }
         .letter {
           font-size: 12px;
           padding-bottom: 10px;
@@ -419,8 +471,14 @@ img {
       display: flex;
       justify-content: center;
       margin: 60px 0;
+      @include mq-up("xm") {
+        flex-direction: column;
+      }
       .list + .list {
         margin-left: 40px;
+        @include mq-up("xm") {
+          margin-left: 0;
+        }
       }
       .list {
         .name:first-child {
@@ -428,6 +486,9 @@ img {
           border-color: pink;
           border-width: 0 0 1px 0;
           padding-bottom: 5px;
+          @include mq-up("xm") {
+            flex-direction: column;
+          }
         }
         .name {
           margin-top: 10px;
