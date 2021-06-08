@@ -558,14 +558,7 @@ img {
   .siharai {
     font-size: 12px;
   }
-  .touroku {
-    padding-bottom: 40px;
-  }
-  /* .big {
-    position: static;
-    width: 320px;
-    height: 320px;
-  } */
+
   .follow {
     flex-direction: column;
   }
@@ -575,6 +568,7 @@ img {
   .touroku {
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
   }
   .sita {
     display: flex;
