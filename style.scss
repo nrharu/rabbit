@@ -48,7 +48,16 @@ img {
       display: flex;
       align-items: center;
       height: 81px;
+      @include mq-up("sm") {
+        justify-content: space-between;
+        height: 55px;
+      }
       .tomate {
+        @include mq-up("sm") {
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
         .hamburger {
           display: flex;
           flex-direction: column;
@@ -57,6 +66,9 @@ img {
           width: 50px;
           height: 45px;
           display: none;
+          @include mq-up("sm") {
+            display: flex;
+          }
           .pan {
             background-color: black;
             height: 2px;
@@ -72,6 +84,10 @@ img {
         height: 100%;
         display: flex;
         justify-content: flex-start;
+        @include mq-up("sm") {
+          flex: 1;
+          justify-content: center;
+        }
         .box {
           display: flex;
           align-items: center;
@@ -79,11 +95,17 @@ img {
             height: 80px;
             width: 140px;
             object-fit: cover;
+            @include mq-up("sm") {
+              height: 55px;
+            }
           }
         }
         .nav {
           display: flex;
           align-items: center;
+          @include mq-up("sm") {
+            display: none;
+          }
           .navigation {
             display: flex;
             justify-content: space-around;
@@ -398,6 +420,9 @@ img {
       display: flex;
       width: 100%;
       margin: 70px 20px 40px 20px;
+      @include mq-up("xm") {
+        flex-direction: column;
+      }
       .touroku {
         display: flex;
         flex-direction: column;
@@ -447,6 +472,9 @@ img {
       }
       .bun {
         width: 50%;
+        @include mq-up("xm") {
+          width: 100%;
+        }
         .SNS {
           display: flex;
           justify-content: space-between;
@@ -500,151 +528,5 @@ img {
       justify-content: center;
       font-size: 12pxs;
     }
-  }
-}
-
-@media (max-width: 744px) {
-  /* .header {
-      background-color: chartreuse;
-    } */
-  /* .mon::before {
-      display: none;
-    } */
-  /* .gotyuumonn {
-      position: static;
-    } */
-  .ka {
-    display: none;
-  }
-  .label1 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .label2 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .itemlists {
-    /* display: block; */
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 40px 35px 0 35px;
-  }
-  .tyou {
-    margin-bottom: 20px;
-    height: 300px;
-  }
-  .tyou + .tyou {
-    /* display: block; */
-    margin-left: 0;
-  }
-  .text2 {
-    padding-top: 10px;
-  }
-  /* .collect {
-      width: 345px;
-      height: 375px;
-    }
-    .gotyuumonn {
-      width: 272px;
-      height: 351px;
-    } */
-  .collection {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-      padding: 0; */
-  }
-  /* .whatch::before {
-      display: none;
-    } */
-  /* .collect {
-      position: static;
-      top: auto;
-      left: auto;
-      right: auto;
-    } */
-  .news {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-  .maison {
-    padding: 0 0 20px 0;
-  }
-  .heading {
-    font-size: 22px;
-  }
-  /* .pin::before {
-      display: none;
-    } */
-  .siharai {
-    font-size: 12px;
-  }
-  .touroku {
-    padding-bottom: 40px;
-  }
-  /* .big {
-      position: static;
-      width: 320px;
-      height: 320px;
-    } */
-  .follow {
-    flex-direction: column;
-  }
-  .bun {
-    width: 100%;
-  }
-  .touroku {
-    display: flex;
-    flex-direction: column;
-  }
-  .sita {
-    display: flex;
-    flex-direction: column;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
-  }
-  .list + .list {
-    margin-left: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .header {
-    height: 55px;
-  }
-  .main {
-    padding-top: 56px;
-  }
-  .nav {
-    display: none;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .tomate {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  .bed {
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-  }
-  .logo {
-    height: 55px;
-  }
-  .head {
-    flex: 1;
-  }
-  .bon {
-    flex: 1;
-  }
-  .head {
-    justify-content: center;
   }
 }
