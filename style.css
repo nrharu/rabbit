@@ -1,531 +1,92 @@
-html {
-  width: 100%;
-  max-width: 100%;
-  min-width: 350px;
-  font-size: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-* {
-  box-sizing: border-box;
-}
-li {
-  list-style-type: none;
-}
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-.body {
-  width: 100%;
-  margin: 0 auto;
-}
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 45px;
-  display: none;
-}
-.pan {
-  background-color: black;
-  height: 2px;
-  width: 30px;
-}
-.pan + .pan {
-  margin-top: 5px;
-}
-.main {
-  padding-top: 82px;
-  margin: 0 20px;
-}
-.header {
-  width: 100%;
-  height: 81px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  z-index: 10;
-  border-style: solid;
-  border-width: 0 0 1px 0;
-  border-color: rgb(146, 139, 139);
-}
-.bed {
-  display: flex;
-  align-items: center;
-  height: 81px;
-}
-.bon {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
-.icon {
-  width: 20px;
-  height: 20px;
-}
-.logo {
-  height: 80px;
-  width: 140px;
-  object-fit: cover;
-}
-.ka {
-  display: none;
-}
-.ta {
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-.ta + .ta {
-  margin-left: 12px;
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.cepalate {
-  background-color: rgb(146, 139, 139);
-  height: 30px;
-  width: 1px;
-}
-.botan {
-  display: flex;
-}
-.head {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-.nav {
-  display: flex;
-  align-items: center;
-}
-.navigation {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.mokuzi {
-  margin-left: 15px;
-  flex-shrink: 0;
-  font-size: clamp(12px, 1vw, 16px);
-}
+/*
+Error: Invalid CSS after "max-width": expected media query list, was ": 1024px"
+        on line 6 of style.scss, in `mq-up'
+        from line 44 of style.scss
 
-.box1 {
-  position: relative;
-  width: 100%;
-}
-.mind::before {
-  padding-top: 39.83333%;
-  content: "";
-  display: block;
-}
-.mind {
-  width: 100%;
-  position: relative;
-}
-.mainvisual {
-  width: 100%;
-  object-fit: cover;
-  max-height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.label {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
-}
-.label2 {
-  background-color: #e9eaea;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
-}
-.label1 {
-  background-color: #e9eaea;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10%;
-  right: 15%;
-}
-.tyou {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-.tyou + .tyou {
-  margin-left: 16px;
-}
+1: $breakpoint-down: (
+2:   "xm": "max-width: 744px",
+3:   "sm": "max-width: 1024px",
+4: ) !default;
+5: @mixin mq-up($breakpoint: md) {
+6:   @media #{map-get($breakpoint-down, $breakpoint)} {
+7:     @content;
+8:   }
+9: }
+10: html {
+11:   width: 100%;
 
-.itemlists {
-  display: flex;
-  padding: 50px 0;
-}
-.mon {
-  position: relative;
-  width: 100%;
-}
-.mon::before {
-  padding-top: 129.03225806%;
-  content: "";
-  display: block;
-}
-.gotyuumonn {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.tyuumon {
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-}
-.collection {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0 80px 0;
-}
-.collect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.text1 {
-  flex: 1;
-}
-.text2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-  flex: 1;
-}
-.text {
-  padding: 0 20px;
-}
-.whatch::before {
-  display: block;
-  padding-top: 129.411765%;
-  content: "";
-}
-.whatch {
-  position: relative;
-  width: 100%;
-}
-.miru {
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-}
-.news {
-  display: flex;
-  justify-content: space-around;
-}
-.maison {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10px;
-  align-items: center;
-}
-.heading {
-  padding-bottom: 10px;
-  font-size: 75%;
-}
-
-.pin::before {
-  padding-top: 100%;
-  display: block;
-  content: "";
-}
-.pin {
-  position: relative;
-  width: 100%;
-}
-.big {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.maison1 {
-  flex: 1;
-  padding: 0 0 0 20px;
-}
-.maison2 {
-  flex: 1;
-  padding: 0 60px;
-}
-.maison3 {
-  flex: 1;
-  padding: 0 20px 0 0;
-}
-.jyouhou {
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-  font-size: 14px;
-}
-.footer {
-  margin: 0 130px;
-}
-.service {
-  display: flex;
-  justify-content: center;
-  border-style: solid;
-  border-width: 1px 0;
-  border-color: rgb(160, 146, 146);
-  margin: 50px 0;
-  height: 103px;
-}
-.server {
-  object-fit: cover;
-  width: 80%;
-  height: 80%;
-}
-
-.hennpinn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-  margin: 24px 0;
-}
-.hennpinn2 {
-  border-style: solid;
-  border-width: 0 1px;
-  border-color: rgb(160, 146, 146);
-}
-.follow {
-  display: flex;
-  width: 100%;
-  margin: 70px 20px 40px 20px;
-}
-.siharai {
-  display: flex;
-  justify-content: center;
-}
-.letter {
-  font-size: 12px;
-  padding-bottom: 10px;
-}
-.kitsune {
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-.bun {
-  width: 50%;
-}
-.apple {
-  height: 45px;
-}
-.mark {
-  width: 100%;
-}
-.touroku {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  width: 50%;
-}
-.hover {
-  display: flex;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dedede;
-  width: 250px;
-  justify-content: center;
-}
-.suru {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 40px;
-  color: black;
-  text-decoration: none;
-  transition-duration: 0.6s;
-  font-size: 14px;
-  text-align: center;
-  padding-left: 70px;
-}
-.suru:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  display: flex;
-}
-.suru::after {
-  content: url(yazi.jpeg);
-  padding-left: 70px;
-}
-.SNS {
-  display: flex;
-  justify-content: space-between;
-}
-.sita {
-  display: flex;
-  justify-content: center;
-  margin: 60px 0;
-}
-.name:first-child {
-  border-style: solid;
-  border-color: pink;
-  border-width: 0 0 1px 0;
-  padding-bottom: 5px;
-}
-.name {
-  margin-top: 10px;
-}
-.list + .list {
-  margin-left: 40px;
-}
-.small {
-  display: flex;
-  justify-content: center;
-  font-size: 12pxs;
-}
-@media (max-width: 744px) {
-  .ka {
-    display: none;
-  }
-  .label1 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .label2 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .itemlists {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 35px 0 35px;
-  }
-  .tyou {
-    margin-bottom: 20px;
-    height: 300px;
-  }
-  .tyou + .tyou {
-    margin-left: 0;
-  }
-  .text2 {
-    padding-top: 10px;
-  }
-  .collection {
-    display: flex;
-    flex-direction: column;
-  }
-  .news {
-    display: flex;
-    flex-direction: column;
-  }
-  .maison {
-    padding: 0 0 20px 0;
-  }
-  .heading {
-    font-size: 22px;
-  }
-  .siharai {
-    font-size: 12px;
-  }
-  .follow {
-    flex-direction: column;
-  }
-  .bun {
-    width: 100%;
-  }
-  .touroku {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 40px;
-  }
-  .sita {
-    display: flex;
-    flex-direction: column;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
-  }
-  .list + .list {
-    margin-left: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .header {
-    height: 55px;
-  }
-  .main {
-    padding-top: 56px;
-  }
-  .nav {
-    display: none;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .tomate {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  .bed {
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-  }
-  .logo {
-    height: 55px;
-  }
-  .head {
-    flex: 1;
-  }
-  .bon {
-    flex: 1;
-  }
-  .head {
-    justify-content: center;
-  }
-}
+Backtrace:
+style.scss:6:in `mq-up'
+style.scss:44
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:74:in `parse_media_query_list'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:523:in `visit_media'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:363:in `block (4 levels) in visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:363:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:363:in `block (3 levels) in visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:363:in `block (2 levels) in visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:358:in `block in visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `with_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"max-width\": expected media query list, was \": 1024px\"\A         on line 6 of style.scss, in `mq-up'\A         from line 44 of style.scss\A \A 1: $breakpoint-down: (\A 2:   \"xm\": \"max-width: 744px\",\A 3:   \"sm\": \"max-width: 1024px\",\A 4: ) !default;\A 5: @mixin mq-up($breakpoint: md) {\A 6:   @media #{map-get($breakpoint-down, $breakpoint)} {\A 7:     @content;\A 8:   }\A 9: }\A 10: html {\A 11:   width: 100%;"; }
