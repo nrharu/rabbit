@@ -131,17 +131,17 @@ img {
 }
 .buttan_wrapper {
   display: flex;
-  .buttan_list-disabled {
-    @include mq-up {
-      display: none;
-    }
-  }
   .buttan_list {
     height: 80px;
     display: flex;
     align-items: center;
-    @include mq-up {
+    @include mq-up(sm) {
       height: 55px;
+    }
+  }
+  .buttan_list-disabled {
+    @include mq-up {
+      display: none;
     }
   }
 }
