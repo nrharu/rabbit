@@ -57,13 +57,13 @@ img {
 }
 
 @media (max-width: 1024px) {
-  .hamburgerWrapper {
+  .hamburger_wrapper {
     flex: 1;
     display: flex;
     align-items: center;
   }
 }
-.hamburgerWrapper .hamburger {
+.hamburger_wrapper .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +73,7 @@ img {
   display: none;
 }
 @media (max-width: 1024px) {
-  .hamburgerWrapper .hamburger {
+  .hamburger_wrapper .hamburger {
     display: flex;
   }
 }
@@ -143,15 +143,15 @@ img {
   padding-right: 10px;
 }
 
-.buttanWrapper {
+.buttan_wrapper {
   display: flex;
 }
 @media (max-width: 744px) {
-  .buttanWrapper .buttan_list-disabled {
+  .buttan_wrapper .buttan_list-disabled {
     display: none;
   }
 }
-.buttanWrapper .buttan_list {
+.buttan_wrapper .buttan_list {
   height: 80px;
   display: flex;
   align-items: center;
