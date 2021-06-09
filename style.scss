@@ -41,7 +41,7 @@ img {
   background-color: white;
   z-index: 10;
   border-bottom: solid 1px rgb(146, 139, 139);
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     height: 55px;
   }
 }
@@ -49,13 +49,13 @@ img {
   display: flex;
   align-items: center;
   height: 81px;
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     justify-content: space-between;
     height: 55px;
   }
 }
 .hamburgerWrapper {
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     flex: 1;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ img {
     width: 50px;
     height: 45px;
     display: none;
-    @include mq-up("sm") {
+    @include mq-up(sm) {
       display: flex;
     }
   }
@@ -88,7 +88,7 @@ img {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     flex: 1;
     justify-content: center;
   }
@@ -100,7 +100,7 @@ img {
     height: 80px;
     width: 140px;
     object-fit: cover;
-    @include mq-up("sm") {
+    @include mq-up(sm) {
       height: 55px;
     }
   }
@@ -108,7 +108,7 @@ img {
 .navigation {
   display: flex;
   align-items: center;
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     display: none;
   }
   .navigation_itemList {
@@ -159,20 +159,20 @@ img {
 .main {
   padding-top: 82px;
   margin: 0 20px;
-  @include mq-up("sm") {
+  @include mq-up(sm) {
     padding-top: 56px;
   }
 }
 .mainvisual {
   position: relative;
   width: 100%;
-  .mind {
+  .mainvisual_imgWrap {
     width: 100%;
     position: relative;
+    top: 0;
   }
 }
 .mainvisual_imgWrap {
-  top: 0;
   .mainvisual_img {
     width: 100%;
     object-fit: cover;
@@ -185,41 +185,37 @@ img {
     display: block;
   }
 }
-.label {
+.mainvisual_label {
   width: 50%;
   position: absolute;
   top: 0;
   bottom: 0;
-  .label2 {
+  .mainvisual_label-right {
     background-color: #e9eaea;
     padding: 10px 20px;
     position: absolute;
     bottom: 10%;
     left: 15%;
+    right: 0;
     @include mq-up("xm") {
       padding: 5px 10px;
       font-size: 8px;
     }
   }
-  .label1 {
+  .mainvisual_label-left {
     background-color: #e9eaea;
     padding: 10px 20px;
     position: absolute;
     bottom: 10%;
     right: 15%;
+    left: 0;
     @include mq-up("xm") {
       padding: 5px 10px;
       font-size: 8px;
     }
   }
 }
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
-}
-.itemlists {
+.product {
   display: flex;
   padding: 50px 0;
   @include mq-up("xm") {
@@ -228,7 +224,7 @@ img {
     padding: 40px 35px 0 35px;
   }
 }
-.tyou {
+.product_list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,26 +234,23 @@ img {
     margin-bottom: 20px;
     height: 300px;
   }
-  + .tyou {
+  + .product_list {
     margin-left: 16px;
     @include mq-up("xm") {
       margin-left: 0;
     }
   }
-  .mon {
+  .product_imgWrap {
     position: relative;
     width: 100%;
   }
-  .tyuumon {
-    // border-style: solid;
-    // border-width: 0 0 3px 0;
-    // border-color: black;
+  .product_tag {
     border-bottom: solid 3px black;
     padding-top: 10px;
   }
 }
-.mon {
-  .gotyuumonn {
+.product_imgWrap {
+  .product_img {
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -272,7 +265,7 @@ img {
     display: block;
   }
 }
-.collection {
+.recommend {
   display: flex;
   justify-content: space-between;
   padding: 50px 0 80px 0;
@@ -294,27 +287,24 @@ img {
     padding-top: 10px;
   }
 }
-.text {
+.recommend_list {
   padding: 0 20px;
-  .whatch {
+  .recommend_imgWrap {
     position: relative;
     width: 100%;
   }
-  .miru {
-    //   border-style: solid;
-    //   border-width: 0 0 3px 0;
-    //   border-color: black;
+  .recommend_listLabel {
     border-bottom: solid 3px black;
     padding-top: 10px;
   }
 }
-.whatch {
+.recommend_imgWrap {
   &:before {
     display: block;
     padding-top: 129.411765%;
     content: "";
   }
-  .collect {
+  .recommend_img {
     position: absolute;
     top: 0;
     left: 0;
@@ -330,7 +320,7 @@ img {
     flex-direction: column;
   }
 }
-.maison {
+.news_list {
   display: flex;
   flex-direction: column;
   margin: 0 10px;
@@ -338,27 +328,24 @@ img {
   @include mq-up("xm") {
     padding: 0 0 20px 0;
   }
-  .heading {
+  .news_list_heading {
     padding-bottom: 10px;
     font-size: 75%;
     @include mq-up("xm") {
       font-size: 22px;
     }
   }
-  .pin {
+  .news_img_wrap {
     position: relative;
     width: 100%;
   }
-  .jyouhou {
-    //   border-style: solid;
-    //   border-width: 0 0 3px 0;
-    //   border-color: black;
+  .news_list_bottom_tag {
     padding-top: 10px;
     border-bottom: solid 3px black;
     font-size: 14px;
   }
 }
-.pin {
+.news_img_wrap {
   .big {
     object-fit: cover;
     position: absolute;
@@ -374,28 +361,27 @@ img {
     content: "";
   }
 }
-.maison1 {
+.news_shopSerch {
   flex: 1;
   padding: 0 0 0 20px;
 }
-.maison2 {
+.news_cafe {
   flex: 1;
   padding: 0 60px;
 }
-.maison3 {
+.news_music {
   flex: 1;
   padding: 0 20px 0 0;
 }
 .service {
   display: flex;
   justify-content: center;
-
   border-style: solid;
   border-width: 1px 0;
   border-color: rgb(160, 146, 146);
   margin: 50px 0;
   height: 103px;
-  .hennpinn {
+  .service_list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,7 +416,7 @@ img {
     flex-direction: column;
   }
 }
-.touroku {
+.login_heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,11 +425,11 @@ img {
   @include mq-up("xm") {
     flex-direction: column;
   }
-  .letter {
+  .login {
     font-size: 12px;
     padding-bottom: 10px;
   }
-  .hover {
+  .login_link_wrap {
     display: flex;
     border-style: solid;
     border-width: 1px;
@@ -452,7 +438,7 @@ img {
     justify-content: center;
   }
 }
-.suru {
+.login_link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,24 +463,24 @@ img {
     padding-left: 70px;
   }
 }
-.bun {
+.sns {
   width: 50%;
   @include mq-up("xm") {
     width: 100%;
   }
-  .SNS {
+  .sns_list {
     display: flex;
     justify-content: space-between;
   }
-  .kitsune {
+  .sns_header {
     font-size: 12px;
     padding-bottom: 20px;
   }
 }
-.SNS {
-  .mark {
+.sns_list {
+  .sns_icon_wrap {
     width: 100%;
-    .apple {
+    .sns_icon {
       height: 45px;
     }
   }
