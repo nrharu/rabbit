@@ -54,7 +54,7 @@ img {
     height: 55px;
   }
 }
-.hamburgerWrapper {
+.hamburger_wrapper {
   @include mq-up(sm) {
     flex: 1;
     display: flex;
@@ -129,7 +129,7 @@ img {
   justify-content: flex-end;
   padding-right: 10px;
 }
-.buttanWrapper {
+.buttan_wrapper {
   display: flex;
   .buttan_list-disabled {
     @include mq-up("xm") {
