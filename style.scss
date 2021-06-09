@@ -74,11 +74,11 @@ img {
   }
 }
 .hamburger {
-  .hamburger-parts {
+  .hamburger_parts {
     background-color: black;
     height: 2px;
     width: 30px;
-    + .hamburger-parts {
+    + .hamburger_parts {
       margin-top: 5px;
     }
   }
@@ -111,7 +111,7 @@ img {
   @include mq-up(sm) {
     display: none;
   }
-  .navigation_itemList {
+  .navigation_item_list {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -132,7 +132,7 @@ img {
 .buttan_wrapper {
   display: flex;
   .buttan_list-disabled {
-    @include mq-up("xm") {
+    @include mq-up {
       display: none;
     }
   }
@@ -140,6 +140,9 @@ img {
     height: 80px;
     display: flex;
     align-items: center;
+    @include mq-up {
+      height: 55px;
+    }
   }
 }
 .buttan_list {
@@ -149,6 +152,9 @@ img {
   .icon {
     width: 20px;
     height: 20px;
+    // @include mq-up {
+    //   display: none;
+    // }
   }
   .buttan_cepalate {
     background-color: rgb(146, 139, 139);
@@ -166,18 +172,22 @@ img {
 .mainvisual {
   position: relative;
   width: 100%;
-  .mainvisual_imgWrap {
+  .mainvisual_img_wrap {
     width: 100%;
     position: relative;
     top: 0;
   }
 }
-.mainvisual_imgWrap {
+.mainvisual_img_wrap {
   .mainvisual_img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     max-height: 700px;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   &:before {
     padding-top: 39.83333%;
@@ -196,8 +206,7 @@ img {
     position: absolute;
     bottom: 10%;
     left: 15%;
-    right: 0;
-    @include mq-up("xm") {
+    @include mq-up {
       padding: 5px 10px;
       font-size: 8px;
     }
@@ -208,17 +217,22 @@ img {
     position: absolute;
     bottom: 10%;
     right: 15%;
-    left: 0;
-    @include mq-up("xm") {
+    @include mq-up {
       padding: 5px 10px;
       font-size: 8px;
     }
   }
 }
+.mainvisual_label_wrap-left {
+  left: 0;
+}
+.mainvisual_label_wrap-right {
+  right: 0;
+}
 .product {
   display: flex;
   padding: 50px 0;
-  @include mq-up("xm") {
+  @include mq-up {
     display: flex;
     flex-direction: column;
     padding: 40px 35px 0 35px;
@@ -230,17 +244,17 @@ img {
   justify-content: center;
   align-items: center;
   flex: 1;
-  @include mq-up("xm") {
+  @include mq-up {
     margin-bottom: 20px;
     height: 300px;
   }
   + .product_list {
     margin-left: 16px;
-    @include mq-up("xm") {
+    @include mq-up {
       margin-left: 0;
     }
   }
-  .product_imgWrap {
+  .product_img_wrap {
     position: relative;
     width: 100%;
   }
@@ -249,7 +263,7 @@ img {
     padding-top: 10px;
   }
 }
-.product_imgWrap {
+.product_img_wrap {
   .product_img {
     object-fit: cover;
     position: absolute;
@@ -272,7 +286,7 @@ img {
 }
 .text1 {
   flex: 1;
-  @include mq-up("xm") {
+  @include mq-up {
     flex-direction: column;
   }
 }
@@ -283,7 +297,7 @@ img {
   align-items: center;
   padding-left: 10px;
   flex: 1;
-  @include mq-up("xm") {
+  @include mq-up {
     padding-top: 10px;
   }
 }
@@ -316,7 +330,7 @@ img {
 }
 .news {
   display: flex;
-  @include mq-up("xm") {
+  @include mq-up {
     flex-direction: column;
   }
 }
@@ -325,13 +339,13 @@ img {
   flex-direction: column;
   margin: 0 10px;
   align-items: center;
-  @include mq-up("xm") {
+  @include mq-up {
     padding: 0 0 20px 0;
   }
   .news_list_heading {
     padding-bottom: 10px;
     font-size: 75%;
-    @include mq-up("xm") {
+    @include mq-up {
       font-size: 22px;
     }
   }
@@ -403,7 +417,7 @@ img {
   .service_list_header {
     display: flex;
     justify-content: center;
-    @include mq-up("xm") {
+    @include mq-up {
       font-size: 12px;
     }
   }
@@ -412,7 +426,7 @@ img {
   display: flex;
   width: 100%;
   margin: 70px 20px 40px 20px;
-  @include mq-up("xm") {
+  @include mq-up {
     flex-direction: column;
   }
 }
@@ -422,7 +436,7 @@ img {
   justify-content: center;
   flex: 1;
   width: 50%;
-  @include mq-up("xm") {
+  @include mq-up {
     flex-direction: column;
   }
   .login {
@@ -465,7 +479,7 @@ img {
 }
 .sns {
   width: 50%;
-  @include mq-up("xm") {
+  @include mq-up {
     width: 100%;
   }
   .sns_list {
@@ -491,7 +505,7 @@ img {
     display: flex;
     justify-content: center;
     margin: 60px 0;
-    @include mq-up("xm") {
+    @include mq-up {
       flex-direction: column;
     }
     .copyright {
@@ -503,7 +517,7 @@ img {
   .information_list {
     + .information_list {
       margin-left: 40px;
-      @include mq-up("xm") {
+      @include mq-up {
         margin-left: 0;
       }
     }
@@ -519,7 +533,7 @@ img {
     border-width: 0 0 1px 0;
     border-bottom: solid 1px pink;
     padding-bottom: 5px;
-    @include mq-up("xm") {
+    @include mq-up {
       flex-direction: column;
     }
   }
