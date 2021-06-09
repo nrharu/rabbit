@@ -435,23 +435,23 @@ img {
   padding: 0 20px;
   margin: 24px 0;
 }
-.service .hennpinn2 {
+.service .service_list_center {
   border-style: solid;
   border-width: 0 1px;
   border-color: #a09292;
 }
 
-.hennpinn .server {
+.service_list .service_img {
   object-fit: cover;
   width: 80%;
   height: 80%;
 }
-.hennpinn .siharai {
+.service_list .service_list_header {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 744px) {
-  .hennpinn .siharai {
+  .service_list .service_list_header {
     font-size: 12px;
   }
 }
@@ -543,34 +543,34 @@ img {
 .footer {
   margin: 0 130px;
 }
-.footer .sita {
+.footer .information {
   display: flex;
   justify-content: center;
   margin: 60px 0;
 }
 @media (max-width: 744px) {
-  .footer .sita {
+  .footer .information {
     flex-direction: column;
   }
 }
-.footer .sita .small {
+.footer .information .copyright {
   display: flex;
   justify-content: center;
-  font-size: 12pxs;
+  font-size: 12px;
 }
-.footer .list + .list {
+.footer .information_list + .information_list {
   margin-left: 40px;
 }
 @media (max-width: 744px) {
-  .footer .list + .list {
+  .footer .information_list + .information_list {
     margin-left: 0;
   }
 }
-.footer .list .name {
+.footer .information_list .information_list_item {
   margin-top: 10px;
 }
 
-.name:first-child {
+.information_list_item:first-child {
   border-style: solid;
   border-color: pink;
   border-width: 0 0 1px 0;
@@ -578,7 +578,7 @@ img {
   padding-bottom: 5px;
 }
 @media (max-width: 744px) {
-  .name:first-child {
+  .information_list_item:first-child {
     flex-direction: column;
   }
 }
