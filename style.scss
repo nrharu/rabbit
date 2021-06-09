@@ -1,8 +1,8 @@
 $breakpoint-down: (
-  "xm": "max-width: 744px",
-  "sm": "max-width: 1024px",
+  "xm": "(max-width: 744px)",
+  "sm": "(max-width: 1024px)",
 ) !default;
-@mixin mq-up($breakpoint: md) {
+@mixin mq-up($breakpoint: "xm") {
   @media #{map-get($breakpoint-down, $breakpoint)} {
     @content;
   }
