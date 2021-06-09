@@ -78,12 +78,12 @@ img {
   }
 }
 
-.hamburger .hamburger-parts {
+.hamburger .hamburger_parts {
   background-color: black;
   height: 2px;
   width: 30px;
 }
-.hamburger .hamburger-parts + .hamburger-parts {
+.hamburger .hamburger_parts + .hamburger_parts {
   margin-top: 5px;
 }
 
@@ -124,12 +124,12 @@ img {
     display: none;
   }
 }
-.navigation .navigation_itemList {
+.navigation .navigation_item_list {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-.navigation .navigation_itemList .navigation_item {
+.navigation .navigation_item_list .navigation_item {
   margin-left: 15px;
   flex-shrink: 0;
   font-size: clamp(12px, 1vw, 16px);
@@ -155,6 +155,11 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
+}
+@media (max-width: 744px) {
+  .buttan_wrapper .buttan_list {
+    height: 55px;
+  }
 }
 
 .buttan_list + .buttan_list {
@@ -184,19 +189,23 @@ img {
   position: relative;
   width: 100%;
 }
-.mainvisual .mainvisual_imgWrap {
+.mainvisual .mainvisual_img_wrap {
   width: 100%;
   position: relative;
   top: 0;
 }
 
-.mainvisual_imgWrap .mainvisual_img {
+.mainvisual_img_wrap .mainvisual_img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   max-height: 700px;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.mainvisual_imgWrap:before {
+.mainvisual_img_wrap:before {
   padding-top: 39.83333%;
   content: "";
   display: block;
@@ -214,7 +223,6 @@ img {
   position: absolute;
   bottom: 10%;
   left: 15%;
-  right: 0;
 }
 @media (max-width: 744px) {
   .mainvisual_label .mainvisual_label-right {
@@ -228,13 +236,20 @@ img {
   position: absolute;
   bottom: 10%;
   right: 15%;
-  left: 0;
 }
 @media (max-width: 744px) {
   .mainvisual_label .mainvisual_label-left {
     padding: 5px 10px;
     font-size: 8px;
   }
+}
+
+.mainvisual_label_wrap-left {
+  left: 0;
+}
+
+.mainvisual_label_wrap-right {
+  right: 0;
 }
 
 .product {
@@ -270,7 +285,7 @@ img {
     margin-left: 0;
   }
 }
-.product_list .product_imgWrap {
+.product_list .product_img_wrap {
   position: relative;
   width: 100%;
 }
@@ -279,7 +294,7 @@ img {
   padding-top: 10px;
 }
 
-.product_imgWrap .product_img {
+.product_img_wrap .product_img {
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -288,7 +303,7 @@ img {
   width: 100%;
   height: 100%;
 }
-.product_imgWrap:before {
+.product_img_wrap:before {
   padding-top: 129.03225806%;
   content: "";
   display: block;
