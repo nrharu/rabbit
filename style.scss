@@ -1,6 +1,7 @@
 $breakpoint-down: (
   "xm": "(max-width: 744px)",
-  "sm": "(max-width: 1024px)",
+  "sm": "(max-width: 760px)",
+  "md": "(max-width: 1024px)",
 ) !default;
 @mixin mq-up($breakpoint: "xm") {
   @media #{map-get($breakpoint-down, $breakpoint)} {
@@ -41,7 +42,7 @@ img {
   background-color: white;
   z-index: 10;
   border-bottom: solid 1px rgb(146, 139, 139);
-  @include mq-up(sm) {
+  @include mq-up(md) {
     height: 55px;
   }
 }
@@ -49,13 +50,13 @@ img {
   display: flex;
   align-items: center;
   height: 81px;
-  @include mq-up(sm) {
+  @include mq-up(md) {
     justify-content: space-between;
     height: 55px;
   }
 }
 .hamburger_wrapper {
-  @include mq-up(sm) {
+  @include mq-up(md) {
     flex: 1;
     display: flex;
     align-items: center;
@@ -68,7 +69,7 @@ img {
     width: 50px;
     height: 45px;
     display: none;
-    @include mq-up(sm) {
+    @include mq-up(md) {
       display: flex;
     }
   }
@@ -88,7 +89,7 @@ img {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  @include mq-up(sm) {
+  @include mq-up(md) {
     flex: 1;
     justify-content: center;
   }
@@ -100,7 +101,7 @@ img {
     height: 80px;
     width: 140px;
     object-fit: cover;
-    @include mq-up(sm) {
+    @include mq-up(md) {
       height: 55px;
     }
   }
@@ -108,7 +109,7 @@ img {
 .navigation {
   display: flex;
   align-items: center;
-  @include mq-up(sm) {
+  @include mq-up(md) {
     display: none;
   }
   .navigation_item_list {
@@ -128,6 +129,9 @@ img {
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
+  @include mq-up(md) {
+    flex: 1;
+  }
 }
 .buttan_wrapper {
   display: flex;
@@ -135,7 +139,7 @@ img {
     height: 80px;
     display: flex;
     align-items: center;
-    @include mq-up(sm) {
+    @include mq-up(md) {
       height: 55px;
     }
   }
@@ -152,9 +156,6 @@ img {
   .icon {
     width: 20px;
     height: 20px;
-    // @include mq-up {
-    //   display: none;
-    // }
   }
   .buttan_cepalate {
     background-color: rgb(146, 139, 139);
@@ -165,7 +166,7 @@ img {
 .main {
   padding-top: 82px;
   margin: 0 20px;
-  @include mq-up(sm) {
+  @include mq-up(md) {
     padding-top: 56px;
   }
 }
@@ -283,36 +284,34 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 50px 0 80px 0;
-}
-.text1 {
-  flex: 1;
   @include mq-up {
     flex-direction: column;
   }
-}
-.text2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-  flex: 1;
-  @include mq-up {
-    padding-top: 10px;
+  .recommend_list2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq-up {
+      padding-top: 10px;
+    }
   }
 }
 .recommend_list {
   padding: 0 20px;
-  .recommend_imgWrap {
+  flex: 1;
+}
+.recommend_list {
+  .recommend_img_wrap {
     position: relative;
     width: 100%;
   }
-  .recommend_listLabel {
+  .recommend_list_header {
     border-bottom: solid 3px black;
     padding-top: 10px;
   }
 }
-.recommend_imgWrap {
+.recommend_img_wrap {
   &:before {
     display: block;
     padding-top: 129.411765%;
@@ -330,6 +329,7 @@ img {
 }
 .news {
   display: flex;
+  margin: 0 20px;
   @include mq-up {
     flex-direction: column;
   }
@@ -337,14 +337,21 @@ img {
 .news_list {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  flex: 1;
   align-items: center;
   @include mq-up {
     padding: 0 0 20px 0;
   }
+  & + .news_list {
+    margin-left: 35px;
+    @include mq-up {
+      margin-left: 0;
+    }
+  }
   .news_list_heading {
     padding-bottom: 10px;
     font-size: 75%;
+    white-space: nowrap;
     @include mq-up {
       font-size: 22px;
     }
@@ -360,7 +367,7 @@ img {
   }
 }
 .news_img_wrap {
-  .big {
+  .news_img {
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -375,18 +382,7 @@ img {
     content: "";
   }
 }
-.news_shopSerch {
-  flex: 1;
-  padding: 0 0 0 20px;
-}
-.news_cafe {
-  flex: 1;
-  padding: 0 60px;
-}
-.news_music {
-  flex: 1;
-  padding: 0 20px 0 0;
-}
+
 .service {
   display: flex;
   justify-content: center;
@@ -422,7 +418,7 @@ img {
     }
   }
 }
-.follow {
+.shopContact {
   display: flex;
   width: 100%;
   margin: 70px 20px 40px 20px;
@@ -430,18 +426,20 @@ img {
     flex-direction: column;
   }
 }
-.login_heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
+.login {
+  font-size: 12px;
+  padding-bottom: 10px;
   width: 50%;
-  @include mq-up {
+  .login_header {
+    display: flex;
     flex-direction: column;
-  }
-  .login {
-    font-size: 12px;
+    justify-content: center;
+    flex: 1;
     padding-bottom: 10px;
+    // width: 50%;
+    @include mq-up {
+      flex-direction: column;
+    }
   }
   .login_link_wrap {
     display: flex;
@@ -456,15 +454,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 250px;
   height: 40px;
-
   text-decoration: none;
   transition-duration: 0.6s;
   font-size: 14px;
   text-align: center;
   padding-left: 70px;
+  color: black;
   &:hover {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -500,18 +497,17 @@ img {
   }
 }
 .footer {
-  margin: 0 130px;
+  margin: 0 60px;
+  font-size: 12px;
+  @include mq-up {
+    margin: 0;
+  }
   .information {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 60px 0;
     @include mq-up {
       flex-direction: column;
-    }
-    .copyright {
-      display: flex;
-      justify-content: center;
-      font-size: 12px;
     }
   }
   .information_list {
@@ -522,19 +518,38 @@ img {
       }
     }
     .information_list_item {
-      margin-top: 10px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      height: 20px;
+      @include mq-up {
+        margin: 0;
+        height: 40px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 16px;
+      }
+      &:first-child {
+        border-style: solid;
+        border-color: pink;
+        border-width: 0 0 1px 0;
+        border-bottom: solid 1px pink;
+        padding-bottom: 5px;
+        @include mq-up {
+          padding: 0;
+        }
+      }
+    }
+    .information_list_content {
+      @include mq-up {
+        display: none;
+      }
     }
   }
 }
-.information_list_item {
-  &:first-child {
-    border-style: solid;
-    border-color: pink;
-    border-width: 0 0 1px 0;
-    border-bottom: solid 1px pink;
-    padding-bottom: 5px;
-    @include mq-up {
-      flex-direction: column;
-    }
-  }
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
 }
