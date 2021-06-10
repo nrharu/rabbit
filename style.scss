@@ -1,6 +1,6 @@
 $breakpoint-down: (
   "xm": "(max-width: 744px)",
-  "sm": "(max-width: 760px)",
+  // "sm": "(max-width: 590px)",
   "md": "(max-width: 1024px)",
 ) !default;
 @mixin mq-up($breakpoint: "xm") {
@@ -234,10 +234,13 @@ img {
   display: flex;
   padding: 50px 0;
   @include mq-up {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 35px 0 35px;
+    flex-wrap: wrap;
   }
+  // @include mq-up(sm) {
+  //   flex-direction: column;
+  //   padding: 40px 35px 0 35px;
+  //   flex-wrap: nowrap;
+  // }
 }
 .product_list {
   display: flex;
@@ -246,14 +249,18 @@ img {
   align-items: center;
   flex: 1;
   @include mq-up {
-    margin-bottom: 20px;
-    height: 300px;
+    width: 500px;
+    flex-shrink: 0;
   }
+  // @include mq-up(sm) {
+  //   margin-bottom: 20px;
+  //   height: 300px;
+  // }
   + .product_list {
     margin-left: 16px;
-    @include mq-up {
-      margin-left: 0;
-    }
+    // @include mq-up(sm) {
+    //   margin-left: 0;
+    // }
   }
   .product_img_wrap {
     position: relative;
@@ -273,6 +280,10 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
+    // @include mq-up {
+    //   width: 272px;
+    //   height: 351px;
+    // }
   }
   &:before {
     padding-top: 129.03225806%;
@@ -502,6 +513,11 @@ img {
   @include mq-up {
     margin: 0;
   }
+  .information_list_topLine {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: pink;
+  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -511,6 +527,9 @@ img {
     }
   }
   .information_list {
+    @include mq-up {
+      border-bottom: solid 1px pink;
+    }
     + .information_list {
       margin-left: 40px;
       @include mq-up {
@@ -524,20 +543,19 @@ img {
       height: 20px;
       @include mq-up {
         margin: 0;
-        height: 40px;
+        height: 45px;
         align-items: flex-start;
         flex-direction: column;
         justify-content: center;
         font-size: 16px;
+        margin-left: 20px;
       }
       &:first-child {
-        border-style: solid;
-        border-color: pink;
-        border-width: 0 0 1px 0;
         border-bottom: solid 1px pink;
         padding-bottom: 5px;
         @include mq-up {
           padding: 0;
+          border-width: 0;
         }
       }
     }
