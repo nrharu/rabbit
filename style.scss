@@ -1,6 +1,6 @@
 $breakpoint-down: (
   "xm": "(max-width: 744px)",
-  // "sm": "(max-width: 590px)",
+  "sm": "(max-width: 590px)",
   "md": "(max-width: 1024px)",
 ) !default;
 @mixin mq-up($breakpoint: "xm") {
@@ -123,6 +123,12 @@ img {
     }
   }
 }
+// .navigation_item {
+//   &:hover {
+//     content: "hello";
+//     background-color: yellows;
+//   }
+// }
 .buttan {
   width: 50%;
   display: flex;
@@ -235,12 +241,14 @@ img {
   padding: 50px 0;
   @include mq-up {
     flex-wrap: wrap;
+    // display: none;
   }
-  // @include mq-up(sm) {
-  //   flex-direction: column;
-  //   padding: 40px 35px 0 35px;
-  //   flex-wrap: nowrap;
-  // }
+  @include mq-up(sm) {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 35px 0 35px;
+    flex-wrap: nowrap;
+  }
 }
 .product_list {
   display: flex;
@@ -249,22 +257,32 @@ img {
   align-items: center;
   flex: 1;
   @include mq-up {
-    width: 500px;
-    flex-shrink: 0;
+    flex: 1 0 auto;
+    height: 351px;
+    width: 272px;
+    padding-top: 10px;
   }
-  // @include mq-up(sm) {
-  //   margin-bottom: 20px;
-  //   height: 300px;
-  // }
+  @include mq-up(sm) {
+    flex: 1;
+    margin-bottom: 20px;
+  }
   + .product_list {
     margin-left: 16px;
-    // @include mq-up(sm) {
-    //   margin-left: 0;
-    // }
+    @include mq-up {
+      margin-left: 0;
+    }
   }
   .product_img_wrap {
     position: relative;
     width: 100%;
+    @include mq-up {
+      height: 351px;
+      width: 272px;
+    }
+    @include mq-up(sm) {
+      height: auto;
+      width: 100%;
+    }
   }
   .product_tag {
     border-bottom: solid 3px black;
@@ -280,15 +298,23 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    // @include mq-up {
-    //   width: 272px;
-    //   height: 351px;
-    // }
+    @include mq-up {
+      position: static;
+    }
+    @include mq-up(sm) {
+      position: absolute;
+    }
   }
   &:before {
     padding-top: 129.03225806%;
     content: "";
     display: block;
+    @include mq-up {
+      display: none;
+    }
+    @include mq-up(sm) {
+      display: block;
+    }
   }
 }
 .recommend {
