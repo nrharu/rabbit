@@ -135,6 +135,10 @@ img {
   font-size: clamp(12px, 1vw, 16px);
 }
 
+.navigation_item_submenu {
+  visibility: hidden;
+}
+
 .navigation_item_hover:hover {
   content: "hello";
   background-color: yellow;
