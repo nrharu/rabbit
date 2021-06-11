@@ -384,6 +384,7 @@ img {
     height: 351px;
     width: 272px;
   }
+<<<<<<< HEAD
 }
 @media (max-width: 590px) {
   .product_list .product_img_wrap {
@@ -395,6 +396,19 @@ img {
   border-bottom: solid 3px black;
   padding-top: 10px;
 }
+=======
+}
+@media (max-width: 590px) {
+  .product_list .product_img_wrap {
+    height: auto;
+    width: 100%;
+  }
+}
+.product_list .product_tag {
+  border-bottom: solid 3px black;
+  padding-top: 10px;
+}
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .product_img_wrap .product_img {
   object-fit: cover;
@@ -419,12 +433,21 @@ img {
   padding-top: 129.03225806%;
   content: "";
   display: block;
+<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .product_img_wrap:before {
     display: none;
   }
 }
+=======
+}
+@media (max-width: 744px) {
+  .product_img_wrap:before {
+    display: none;
+  }
+}
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 @media (max-width: 590px) {
   .product_img_wrap:before {
     display: block;
@@ -461,11 +484,19 @@ img {
 .recommend_list .recommend_img_wrap {
   position: relative;
   width: 100%;
+<<<<<<< HEAD
 }
 .recommend_list .recommend_list_header {
   border-bottom: solid 3px black;
   padding-top: 10px;
 }
+=======
+}
+.recommend_list .recommend_list_header {
+  border-bottom: solid 3px black;
+  padding-top: 10px;
+}
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .recommend_img_wrap:before {
   display: block;
@@ -485,12 +516,21 @@ img {
 .news {
   display: flex;
   margin: 0 20px;
+<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .news {
     flex-direction: column;
   }
 }
+=======
+}
+@media (max-width: 744px) {
+  .news {
+    flex-direction: column;
+  }
+}
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .news_list {
   display: flex;
@@ -605,12 +645,21 @@ img {
   justify-content: center;
   flex: 1;
   padding-bottom: 10px;
+<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .login .login_header {
     flex-direction: column;
   }
 }
+=======
+}
+@media (max-width: 744px) {
+  .login .login_header {
+    flex-direction: column;
+  }
+}
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 .login .login_link_wrap {
   display: flex;
   border-style: solid;
@@ -746,4 +795,7 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
+<<<<<<< HEAD
+>>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
+=======
 >>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
