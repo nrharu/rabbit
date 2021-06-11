@@ -123,6 +123,9 @@ img {
     }
   }
 }
+.navigation_item_submenu {
+  visibility: hidden;
+}
 .navigation_item_hover {
   &:hover {
     content: "hello";
