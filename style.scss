@@ -123,12 +123,12 @@ img {
     }
   }
 }
-// .navigation_item {
-//   &:hover {
-//     content: "hello";
-//     background-color: yellows;
-//   }
-// }
+.navigation_item_hover {
+  &:hover {
+    content: "hello";
+    background-color: yellow;
+  }
+}
 .buttan {
   width: 50%;
   display: flex;
