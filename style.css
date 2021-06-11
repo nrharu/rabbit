@@ -1,626 +1,69 @@
-html {
-  width: 100%;
-  max-width: 100%;
-  min-width: 350px;
-  font-size: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-* {
-  box-sizing: border-box;
-}
-li {
-  list-style-type: none;
-}
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-.body {
-  width: 100%;
-  margin: 0 auto;
-}
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 45px;
-  display: none;
-}
-.pan {
-  background-color: black;
-  height: 2px;
-  width: 30px;
-}
-.pan + .pan {
-  margin-top: 5px;
-}
-.main {
-  padding-top: 82px;
-  margin: 0 20px;
-}
-.header {
-  width: 100%;
-  height: 81px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  z-index: 10;
-  border-style: solid;
-  border-width: 0 0 1px 0;
-  border-color: rgb(146, 139, 139);
-}
-.bed {
-  display: flex;
-  align-items: center;
-  height: 81px;
-}
-.bon {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
-.icon {
-  width: 20px;
-  height: 20px;
-}
-.logo {
-  height: 80px;
-  width: 140px;
-  object-fit: cover;
-}
-.ka {
-  display: none;
-}
-.ta {
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-.ta + .ta {
-  margin-left: 12px;
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.cepalate {
-  background-color: rgb(146, 139, 139);
-  height: 30px;
-  width: 1px;
-  /* margin-left: 20px; */
-}
-.botan {
-  display: flex;
-}
-.head {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-.nav {
-  display: flex;
-  align-items: center;
-}
-.navigation {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.mokuzi {
-  /* display: flex; */
-  margin-left: 15px;
-  flex-shrink: 0;
-  font-size: clamp(12px, 1vw, 16px);
-}
+/*
+Error: Invalid CSS after "...h: 744px)" "md"": expected ")", was ": "(max-width: ..."
+        on line 2 of style.scss
 
-.box1 {
-  position: relative;
-  width: 100%;
-}
-.mind::before {
-  padding-top: 39.83333%;
-  content: "";
-  display: block;
-}
-.mind {
-  width: 100%;
-  position: relative;
-}
-.mainvisual {
-  /* height: 700px; */
-  width: 100%;
-  object-fit: cover;
-  max-height: 700px;
-  position: absolute;
-  top: 0;
-  /* bottom: 0; */
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.label {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
-}
-.label2 {
-  background-color: #e9eaea;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
-}
-.label1 {
-  background-color: #e9eaea;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10%;
-  right: 15%;
-}
-.tyou {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-.tyou + .tyou {
-  margin-left: 16px;
-}
+1: $breakpoint: (
+2:   "sm": "(max-width: 744px)" "md": "(max-width: 1024px)",
+3: ) !default;
+4: @mixin html {
+5:   width: 100%;
+6:   max-width: 100%;
+7:   min-width: 350px;
 
-.itemlists {
-  display: flex;
-  padding: 50px 0;
-}
-.mon {
-  position: relative;
-  width: 100%;
-}
-.mon::before {
-  padding-top: 129.03225806%;
-  content: "";
-  display: block;
-}
-.gotyuumonn {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.tyuumon {
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-  /* margin-top: 10px; */
-}
-.collection {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0 80px 0;
-}
-.collect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.text1 {
-  flex: 1;
-}
-.text2 {
-  /* box-sizing: none; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-  flex: 1;
-}
-.text {
-  padding: 0 20px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-}
-.whatch::before {
-  display: block;
-  padding-top: 129.411765%;
-  content: "";
-}
-.whatch {
-  position: relative;
-  width: 100%;
-}
-.miru {
-  /* display: inline;
-  display: flex;
-  justify-content: center; */
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-}
-.news {
-  display: flex;
-  /* justify-content: space-between; */
-  justify-content: space-around;
-}
-.maison {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10px;
-  /* justify-content: center; */
-  align-items: center;
-  /* padding: 0 20px; */
-  /* flex-grow: 0; */
-}
-.heading {
-  /* white-space: nowrap; */
-  padding-bottom: 10px;
-  font-size: 75%;
-}
-
-.pin::before {
-  padding-top: 100%;
-  display: block;
-  content: "";
-}
-.pin {
-  position: relative;
-  width: 100%;
-}
-.big {
-  /* display: block; */
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.maison1 {
-  flex: 1;
-  padding: 0 0 0 20px;
-}
-.maison2 {
-  flex: 1;
-  padding: 0 60px;
-}
-.maison3 {
-  flex: 1;
-  padding: 0 20px 0 0;
-}
-.jyouhou {
-  /* display: inline-block; */
-  border-style: solid;
-  border-width: 0 0 3px 0;
-  border-color: black;
-  padding-top: 10px;
-  font-size: 14px;
-}
-.footer {
-  margin: 0 130px;
-}
-.service {
-  display: flex;
-  justify-content: center;
-  /* justify-content: space-between; */
-  border-style: solid;
-  border-width: 1px 0;
-  border-color: rgb(160, 146, 146);
-  margin: 50px 0;
-  height: 103px;
-}
-.server {
-  object-fit: cover;
-  width: 80%;
-  height: 80%;
-}
-
-.hennpinn {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  padding: 0 20px;
-  margin: 24px 0;
-}
-/* .hennpinn1 {
-  border-style: solid;
-  border-width: 0 0 0 1px;
-  border-color: rgb(160, 146, 146);
-} */
-.hennpinn2 {
-  border-style: solid;
-  border-width: 0 1px;
-  border-color: rgb(160, 146, 146);
-}
-/* .hennpinn3 {
-  border-style: solid;
-  border-width: 0 1px 0 0;
-  border-color: rgb(160, 146, 146);
-} */
-.follow {
-  display: flex;
-  width: 100%;
-  margin: 70px 20px 40px 20px;
-}
-.siharai {
-  display: flex;
-  justify-content: center;
-}
-.letter {
-  font-size: 12px;
-  padding-bottom: 10px;
-}
-.kitsune {
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-.bun {
-  width: 50%;
-}
-.apple {
-  height: 45px;
-}
-.mark {
-  width: 100%;
-}
-.touroku {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  flex: 1;
-  width: 50%;
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: #dedede; */
-}
-.hover {
-  display: flex;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dedede;
-  width: 250px;
-  justify-content: center;
-}
-.suru {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 10px; */
-  width: 250px;
-  height: 40px;
-  /* padding: 0 0 0 30px; */
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: #dedede; */
-  color: black;
-  text-decoration: none;
-  transition-duration: 0.6s;
-  font-size: 14px;
-  text-align: center;
-  padding-left: 70px;
-}
-.suru:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  display: flex;
-}
-.suru::after {
-  content: url(yazi.jpeg);
-  padding-left: 70px;
-}
-/* .suru:hover {
-  color: white;
-} */
-/* .gazo {
-  margin-top: 10px;
-} */
-.SNS {
-  display: flex;
-  justify-content: space-between;
-  /* justify-content: flex-start; */
-}
-.sita {
-  display: flex;
-  justify-content: center;
-  margin: 60px 0;
-}
-.name:first-child {
-  border-style: solid;
-  border-color: pink;
-  border-width: 0 0 1px 0;
-  padding-bottom: 5px;
-}
-.name {
-  margin-top: 10px;
-}
-.list + .list {
-  margin-left: 40px;
-}
-
-.small {
-  display: flex;
-  justify-content: center;
-  font-size: 12pxs;
-}
-@media (max-width: 744px) {
-  /* .header {
-    background-color: chartreuse;
-  } */
-  /* .mon::before {
-    display: none;
-  } */
-  /* .gotyuumonn {
-    position: static;
-  } */
-  .ka {
-    display: none;
-  }
-  .label1 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .label2 {
-    padding: 5px 10px;
-    font-size: 8px;
-  }
-  .itemlists {
-    /* display: block; */
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 40px 35px 0 35px;
-  }
-  .tyou {
-    margin-bottom: 20px;
-    height: 300px;
-  }
-  .tyou + .tyou {
-    /* display: block; */
-    margin-left: 0;
-  }
-  .text2 {
-    padding-top: 10px;
-  }
-  /* .collect {
-    width: 345px;
-    height: 375px;
-  }
-  .gotyuumonn {
-    width: 272px;
-    height: 351px;
-  } */
-  .collection {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    padding: 0; */
-  }
-  /* .whatch::before {
-    display: none;
-  } */
-  /* .collect {
-    position: static;
-    top: auto;
-    left: auto;
-    right: auto;
-  } */
-  .news {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-  .maison {
-    padding: 0 0 20px 0;
-  }
-  .heading {
-    font-size: 22px;
-  }
-  /* .pin::before {
-    display: none;
-  } */
-  .siharai {
-    font-size: 12px;
-  }
-  .touroku {
-    padding-bottom: 40px;
-  }
-  /* .big {
-    position: static;
-    width: 320px;
-    height: 320px;
-  } */
-  .follow {
-    flex-direction: column;
-  }
-  .bun {
-    width: 100%;
-  }
-  .touroku {
-    display: flex;
-    flex-direction: column;
-  }
-  .sita {
-    display: flex;
-    flex-direction: column;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
-  }
-  .list + .list {
-    margin-left: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .header {
-    height: 55px;
-  }
-  .main {
-    padding-top: 56px;
-  }
-  .nav {
-    display: none;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .tomate {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  .bed {
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-  }
-  .logo {
-    height: 55px;
-  }
-  .head {
-    flex: 1;
-  }
-  .bon {
-    flex: 1;
-  }
-  .head {
-    justify-content: center;
-  }
-}
+Backtrace:
+style.scss:2
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:797:in `block in paren'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:904:in `without_stop_at'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:792:in `paren'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:746:in `square_list'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:733:in `special_fun'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:727:in `raw'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:642:in `funcall'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:531:in `css_min_max'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:507:in `ident'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_not'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_div'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_minus'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_plus'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `times_div_or_mod'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `plus_or_minus'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `relational'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `eq_or_neq'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `and_expr'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `or_expr'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:481:in `space'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:422:in `interpolation'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:343:in `expr'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:853:in `assert_expr'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:653:in `variable'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...h: 744px)\" \"md\"\": expected \")\", was \": \"(max-width: ...\"\A         on line 2 of style.scss\A \A 1: $breakpoint: (\A 2:   \"sm\": \"(max-width: 744px)\" \"md\": \"(max-width: 1024px)\",\A 3: ) !default;\A 4: @mixin html {\A 5:   width: 100%;\A 6:   max-width: 100%;\A 7:   min-width: 350px;"; }
