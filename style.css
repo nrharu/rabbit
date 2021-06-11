@@ -1,74 +1,3 @@
-<<<<<<< HEAD
-/*
-Error: Invalid CSS after "...h: 744px)" "md"": expected ")", was ": "(max-width: ..."
-        on line 2 of style.scss
-
-1: $breakpoint: (
-2:   "sm": "(max-width: 744px)" "md": "(max-width: 1024px)",
-3: ) !default;
-4: @mixin html {
-5:   width: 100%;
-6:   max-width: 100%;
-7:   min-width: 350px;
-
-Backtrace:
-style.scss:2
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:797:in `block in paren'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:904:in `without_stop_at'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:792:in `paren'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:746:in `square_list'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:733:in `special_fun'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:727:in `raw'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:642:in `funcall'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:531:in `css_min_max'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:507:in `ident'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_not'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_div'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_minus'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_plus'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `times_div_or_mod'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `plus_or_minus'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `relational'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `eq_or_neq'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `and_expr'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `or_expr'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:481:in `space'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:422:in `interpolation'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:343:in `expr'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:853:in `assert_expr'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:653:in `variable'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...h: 744px)\" \"md\"\": expected \")\", was \": \"(max-width: ...\"\A         on line 2 of style.scss\A \A 1: $breakpoint: (\A 2:   \"sm\": \"(max-width: 744px)\" \"md\": \"(max-width: 1024px)\",\A 3: ) !default;\A 4: @mixin html {\A 5:   width: 100%;\A 6:   max-width: 100%;\A 7:   min-width: 350px;"; }
-=======
 html {
   width: 100%;
   max-width: 100%;
@@ -204,6 +133,11 @@ img {
   margin-left: 15px;
   flex-shrink: 0;
   font-size: clamp(12px, 1vw, 16px);
+}
+
+.navigation_item_hover:hover {
+  content: "hello";
+  background-color: yellow;
 }
 
 .buttan {
@@ -384,7 +318,6 @@ img {
     height: 351px;
     width: 272px;
   }
-<<<<<<< HEAD
 }
 @media (max-width: 590px) {
   .product_list .product_img_wrap {
@@ -396,19 +329,6 @@ img {
   border-bottom: solid 3px black;
   padding-top: 10px;
 }
-=======
-}
-@media (max-width: 590px) {
-  .product_list .product_img_wrap {
-    height: auto;
-    width: 100%;
-  }
-}
-.product_list .product_tag {
-  border-bottom: solid 3px black;
-  padding-top: 10px;
-}
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .product_img_wrap .product_img {
   object-fit: cover;
@@ -433,21 +353,12 @@ img {
   padding-top: 129.03225806%;
   content: "";
   display: block;
-<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .product_img_wrap:before {
     display: none;
   }
 }
-=======
-}
-@media (max-width: 744px) {
-  .product_img_wrap:before {
-    display: none;
-  }
-}
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 @media (max-width: 590px) {
   .product_img_wrap:before {
     display: block;
@@ -484,19 +395,11 @@ img {
 .recommend_list .recommend_img_wrap {
   position: relative;
   width: 100%;
-<<<<<<< HEAD
 }
 .recommend_list .recommend_list_header {
   border-bottom: solid 3px black;
   padding-top: 10px;
 }
-=======
-}
-.recommend_list .recommend_list_header {
-  border-bottom: solid 3px black;
-  padding-top: 10px;
-}
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .recommend_img_wrap:before {
   display: block;
@@ -516,21 +419,12 @@ img {
 .news {
   display: flex;
   margin: 0 20px;
-<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .news {
     flex-direction: column;
   }
 }
-=======
-}
-@media (max-width: 744px) {
-  .news {
-    flex-direction: column;
-  }
-}
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 
 .news_list {
   display: flex;
@@ -645,21 +539,12 @@ img {
   justify-content: center;
   flex: 1;
   padding-bottom: 10px;
-<<<<<<< HEAD
 }
 @media (max-width: 744px) {
   .login .login_header {
     flex-direction: column;
   }
 }
-=======
-}
-@media (max-width: 744px) {
-  .login .login_header {
-    flex-direction: column;
-  }
-}
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
 .login .login_link_wrap {
   display: flex;
   border-style: solid;
@@ -795,7 +680,3 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
-<<<<<<< HEAD
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
-=======
->>>>>>> fb726e9ef4aca1156aded9d558d339a114d466cd
