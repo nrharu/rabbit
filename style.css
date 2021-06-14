@@ -140,14 +140,11 @@ img {
   left: 0;
   top: 80px;
   width: 100vw;
-  visibility: hidden;
+  background-color: chartreuse;
 }
 
 .navigation_item:hover {
   background-color: yellow;
-  visibility: visible;
-  top: 80px;
-  opacity: 1;
 }
 
 .buttan {
