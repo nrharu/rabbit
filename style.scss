@@ -123,13 +123,46 @@ img {
     }
   }
 }
-.navigation_item_submenu {
+// li.navigation_item div.navigation_item_submenu_wrap {
+//   position: absolute;
+//   top: 40px;
+//   left: 0;
+//   box-sizing: border-box;
+//   width: 100%;
+//   padding: 20px 2%;
+//   // background: #072a24;
+//   -webkit-transition: all 0.2s ease;
+//   transition: all 0.2s ease;
+// }
+
+// li.navigation_item:hover div.navigation_item_submenu_wrap {
+//   top: 50px;
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// li.navigation_item div.navigation_item_submenu_wrap > li {
+//   float: left;
+//   width: 32%;
+//   border: none;
+// }
+
+// li.navigation_item div.navigation_item_submenu_wrap > li:nth-child(3n + 2) {
+//   margin: 0 1%;
+// }
+.navigation_item_submenu_wrap {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100vw;
   visibility: hidden;
 }
-.navigation_item_hover {
+.navigation_item {
   &:hover {
-    content: "hello";
     background-color: yellow;
+    visibility: visible;
+    top: 80px;
+    opacity: 1;
   }
 }
 .buttan {
