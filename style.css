@@ -135,13 +135,19 @@ img {
   font-size: clamp(12px, 1vw, 16px);
 }
 
-.navigation_item_submenu {
+.navigation_item_submenu_wrap {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100vw;
   visibility: hidden;
 }
 
-.navigation_item_hover:hover {
-  content: "hello";
+.navigation_item:hover {
   background-color: yellow;
+  visibility: visible;
+  top: 80px;
+  opacity: 1;
 }
 
 .buttan {
