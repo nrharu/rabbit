@@ -74,9 +74,59 @@ img {
     }
   }
 }
-#hamburger_checkbox input:checked ~ .sidemenu{
-  // visibility: visible;s
+@keyframes sidemenu_animation{
+  0%{
+opacity: 0;
+// visibility: hidden;
+transform: translateX(-375px);
+  }
+  50%{
+opacity: 0.5;
+// visibility: visible;
+transform: translateX(-175px);
+  }
+  100%{
+opacity: 1;
+// visibility: visible;
+transform: translateX(0px);
+  }
+}
+#hamburger_checkbox{
   display: none;
+  &:checked ~ .sidemenu{
+    // visibility: visible;
+    opacity: 1;
+    animation-name: sidemenu_animation;
+    animation-direction: 5s;
+    // animation-iteration-count: infinite;
+    // animation-fill-mode: forwards;
+  }
+}
+.sidemenu{
+  position: absolute;
+  top: 55px;
+  // visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  width: 350px;
+  height: 100vh;
+.sidemenu_list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 20px;
+  width: 100%;
+  height:55px;
+  border-bottom:solid 1px #e9eaea;
+  .sidemenu_icon{
+    height: 16px;
+    width:16px;
+    text-align: end;
+  }
+  input.sidemenu_search{
+    height: 40px;
+  }
+}
 }
 .hamburger {
   .hamburger_parts {
@@ -87,14 +137,6 @@ img {
       margin-top: 5px;
     }
   }
-}
-.sidemenu{
-  position: absolute;
-  top: 55px;
-  // visibility: hidden;
-  // .sidemenu_item{
-
-  // }
 }
 .headerItems {
   width: 50%;
@@ -141,15 +183,33 @@ img {
   &:hover{
     border-style: solid;
     border-width: 0 1px;
-    // border-bottom-color: white;
+    border-bottom-color: white;
     border-color: #e9eaea;
+    border-bottom-width: -1px;
+    z-index: 10;
     >.navigation_item_submenu_wrap {
       visibility: visible;
-      // opacity: 1;
       border-style: solid;
       border-top-width:1px ;
       border-color: #e9eaea;
+      display: flex;
+      animation-duration: 0.5s;
+      animation-name: fadeIn_submenu;
     }
+  }
+}
+@keyframes fadeIn_submenu {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 .navigation_item_hover{
@@ -164,18 +224,13 @@ img {
   height: 350px;
   background-color: white;
   visibility: hidden;
-  // opacity: 0;
   display: flex;
   &:hover{
-    // opacity: 1;
-    visibility: visible;
-    // transition-duration: 1.0s;
+    animation-name: fadeIn_submenu;
   }
   .navigation_item_submenu{
     font-size: 100%;
-    +.navigation_item_submenu{
-      padding-left: 50px;
-    }
+    padding-left: 50px;
   }
 }
 .navigation_item_subitem{
