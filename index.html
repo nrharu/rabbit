@@ -29,14 +29,7 @@
   <body class="body">
     <header class="header">
       <div class="fixedHeader">
-        <input type="checkbox" class="hamburger_checkbox">
-        <div class="hamburger_wrapper">
-          <ul class="hamburger">
-            <li class="hamburger_parts"></li>
-            <li class="hamburger_parts"></li>
-            <li class="hamburger_parts"></li>
-          </ul>
-        </div>
+        <input type="checkbox" id="hamburger_checkbox" name="hamburger_checkbox">
         <ul class="sidemenu">
           <li class="sidemenu_item">検索</li>
           <li class="sidemenu_item">メンズ</li>
@@ -45,6 +38,14 @@
           <li class="sidemenu_item">MUSIQUE</li>
           <li class="sidemenu_item">EVENTS</li>
         </ul>
+        <label class="hamburger_wrapper" for="hamburger_checkbox">
+          <ul class="hamburger">
+            <li class="hamburger_parts"></li>
+            <li class="hamburger_parts"></li>
+            <li class="hamburger_parts"></li>
+          </ul>
+        </label>
+
         <div class="headerItems">
           <div class="logoWrapper">
             <img src="images.jpg" alt="ロゴ" class="logo" />
