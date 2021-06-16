@@ -74,39 +74,102 @@ img {
     }
   }
 }
-@keyframes sidemenu_animation{
+@keyframes sidemenu_slideIn{
   0%{
-opacity: 0;
-// visibility: hidden;
-transform: translateX(-375px);
+    opacity: 0;
+    transform: translateX(-375px);
+  }
+  13%{
+    opacity:0.125;
+    transform: translateX(-328.125px);
+  }
+  25%{
+    opacity:0.25;
+    transform: translateX(-281.25px);
+  }
+  38%{
+    opacity:0.375;
+    transform: translateX(-234.375px);
   }
   50%{
-opacity: 0.5;
-// visibility: visible;
-transform: translateX(-175px);
+    opacity: 0.5;
+    transform: translateX(-187.5px);
+  }
+  63%{
+    opacity:0.625;
+    transform: translateX(-140.625px);
+  }
+  75%{
+    opacity:0.75;
+    transform: translateX(-93.75px);
+  }
+  88%{
+    opacity:0.875;
+    transform: translateX(-46.875px);
   }
   100%{
-opacity: 1;
-// visibility: visible;
-transform: translateX(0px);
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes sidemenu_slideOut{
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  13%{
+    opacity:0.875;
+    transform: translateX(-46.875px);
+  }
+  25%{
+    opacity:0.625;
+    transform: translateX(-93.75px);
+  }
+  38%{
+    opacity:0.75;
+    transform: translateX(-140.625px);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateX(-187.5px);
+  }
+  63%{
+    opacity:0.375;
+    transform: translateX(-234.375px);
+  }
+  75%{
+    opacity:0.25;
+    transform: translateX(-281.25px);
+  }
+  88%{
+    opacity:0.125;
+    transform: translateX(-328.125px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-375px);
   }
 }
 #hamburger_checkbox{
   display: none;
   &:checked ~ .sidemenu{
     visibility: visible;
-    // opacity: 1;
-    animation-name: sidemenu_animation;
-    animation-direction: 5s;
-    // animation-iteration-count: infinite;
-    // animation-fill-mode: forwards;
+    animation-name: sidemenu_slideIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  &:checked:not(.hamburger_checkbox){
+    visibility: hidden;
+    animation-name: submenu_slideOut;
+    animation-duration: 0.3s;
   }
 }
 .sidemenu{
   position: absolute;
   top: 55px;
   visibility: hidden;
-  // opacity: 0;
+  animation-name: submenu_slideOut;
+  animation-duration: 0.3s;
   background-color: white;
   width: 350px;
   height: 100vh;
@@ -122,6 +185,10 @@ transform: translateX(0px);
     margin: 0;
     padding: 0;
     border: 0;
+    &::placeholder{
+      padding-left: 10px;
+      font-size: 16px;
+    }
   }
   .sidemenu_search_icon{
     width: 20px;
@@ -140,7 +207,6 @@ transform: translateX(0px);
   .sidemenu_icon{
     height: 16px;
     width:16px;
-    // text-align: end;
   }
 }
 }
@@ -216,15 +282,14 @@ transform: translateX(0px);
 }
 @keyframes fadeIn_submenu {
   0% {
-    visibility: hidden;
+
     opacity: 0;
   }
   50% {
-    visibility: visible;
+
     opacity: 0.5;
   }
   100% {
-    visibility: visible;
     opacity: 1;
   }
 }
@@ -241,9 +306,6 @@ transform: translateX(0px);
   background-color: white;
   visibility: hidden;
   display: flex;
-  &:hover{
-    animation-name: fadeIn_submenu;
-  }
   .navigation_item_submenu{
     font-size: 100%;
     padding-left: 50px;
@@ -699,6 +761,7 @@ transform: translateX(0px);
       white-space: nowrap;
       display: flex;
       align-items: center;
+width: 70%;
       height: 20px;
       @include mq-up {
         margin: 0;
@@ -708,6 +771,9 @@ transform: translateX(0px);
         justify-content: center;
         font-size: 16px;
         margin-left: 20px;
+        // &:after{
+        //   content: url(yazi.jpeg);
+        // }
       }
       &:first-child {
         border-bottom: solid 1px pink;
