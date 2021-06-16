@@ -94,8 +94,8 @@ transform: translateX(0px);
 #hamburger_checkbox{
   display: none;
   &:checked ~ .sidemenu{
-    // visibility: visible;
-    opacity: 1;
+    visibility: visible;
+    // opacity: 1;
     animation-name: sidemenu_animation;
     animation-direction: 5s;
     // animation-iteration-count: infinite;
@@ -105,11 +105,30 @@ transform: translateX(0px);
 .sidemenu{
   position: absolute;
   top: 55px;
-  // visibility: hidden;
-  opacity: 0;
+  visibility: hidden;
+  // opacity: 0;
   background-color: white;
   width: 350px;
   height: 100vh;
+.sidemenu_seachBox_wrap{
+  width:100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom:solid 1px #e9eaea;
+  input.sidemenu_search{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .sidemenu_search_icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+  }
+}
 .sidemenu_list{
   display: flex;
   align-items: center;
@@ -121,10 +140,7 @@ transform: translateX(0px);
   .sidemenu_icon{
     height: 16px;
     width:16px;
-    text-align: end;
-  }
-  input.sidemenu_search{
-    height: 40px;
+    // text-align: end;
   }
 }
 }
@@ -180,10 +196,10 @@ transform: translateX(0px);
   }
 }
 .navigation_item{
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: white; 
   &:hover{
-    border-style: solid;
-    border-width: 0 1px;
-    border-bottom-color: white;
     border-color: #e9eaea;
     border-bottom-width: -1px;
     z-index: 10;
@@ -655,9 +671,11 @@ transform: translateX(0px);
     margin: 0;
   }
   .information_list_topLine {
+    @include mq-up{
     border-style: solid;
     border-width: 1px 0;
     border-color: pink;
+    }
   }
   .information {
     display: flex;
