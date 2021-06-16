@@ -24,6 +24,7 @@ img {
 .body {
   width: 100%;
   margin: 0 auto;
+  max-width: 1400px;
 }
 
 .header {
@@ -244,7 +245,7 @@ img {
 }
 .logoWrapper .logo {
   height: 80px;
-  width: 140px;
+  width: 160px;
   object-fit: cover;
 }
 @media (max-width: 1024px) {
@@ -279,6 +280,7 @@ img {
   border-style: solid;
   border-width: 0 1px;
   border-color: white;
+  max-width: 100px;
 }
 .navigation_item:hover {
   border-color: #e9eaea;
@@ -380,7 +382,7 @@ img {
 }
 
 .main {
-  padding-top: 82px;
+  padding-top: 87px;
   margin: 0 20px;
 }
 @media (max-width: 1024px) {
@@ -813,7 +815,7 @@ img {
   .footer .information_list_topLine {
     border-style: solid;
     border-width: 1px 0;
-    border-color: pink;
+    border-color: #dedede;
   }
 }
 .footer .information {
@@ -828,7 +830,7 @@ img {
 }
 @media (max-width: 744px) {
   .footer .information_list {
-    border-bottom: solid 1px pink;
+    border-bottom: solid 1px #dedede;
   }
 }
 .footer .information_list + .information_list {
@@ -858,7 +860,7 @@ img {
   }
 }
 .footer .information_list .information_list_item:first-child {
-  border-bottom: solid 1px pink;
+  border-bottom: solid 1px #dedede;
   padding-bottom: 5px;
 }
 @media (max-width: 744px) {
