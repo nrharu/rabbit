@@ -30,6 +30,7 @@ img {
 .body {
   width: 100%;
   margin: 0 auto;
+  max-width: 1400px;
 }
 .header {
   width: 100%;
@@ -235,7 +236,7 @@ img {
   align-items: center;
   .logo {
     height: 80px;
-    width: 140px;
+    width: 160px;
     object-fit: cover;
     @include mq-up(md) {
       height: 55px; 
@@ -265,6 +266,7 @@ img {
   border-style: solid;
   border-width: 0 1px;
   border-color: white; 
+  max-width: 100px;
   &:hover{
     border-color: #e9eaea;
     border-bottom-width: -1px;
@@ -361,7 +363,7 @@ img {
   }
 }
 .main {
-  padding-top: 82px;
+  padding-top: 87px;
   margin: 0 20px;
   @include mq-up(md) {
     padding-top: 56px;
@@ -736,7 +738,7 @@ img {
     @include mq-up{
     border-style: solid;
     border-width: 1px 0;
-    border-color: pink;
+    border-color: #dedede;
     }
   }
   .information {
@@ -749,7 +751,7 @@ img {
   }
   .information_list {
     @include mq-up {
-      border-bottom: solid 1px pink;
+      border-bottom: solid 1px #dedede;
     }
     + .information_list {
       margin-left: 40px;
@@ -776,7 +778,7 @@ width: 70%;
         // }
       }
       &:first-child {
-        border-bottom: solid 1px pink;
+        border-bottom: solid 1px #dedede;
         padding-bottom: 5px;
         @include mq-up {
           padding: 0;
