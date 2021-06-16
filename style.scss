@@ -151,6 +151,9 @@ img {
     transform: translateX(-375px);
   }
 }
+// .hide_checkbox{
+//   display: none;
+// }
 #hamburger_checkbox{
   display: none;
   &:checked ~ .sidemenu{
