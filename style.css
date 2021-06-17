@@ -242,6 +242,10 @@ img {
   display: block;
 }
 
+#sidemenu_list_checkBox_men_selection:checked ~ .sidemenu_list_grndchild_selection {
+  display: block;
+}
+
 .hamburger .hamburger_parts {
   background-color: black;
   height: 2px;
