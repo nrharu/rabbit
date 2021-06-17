@@ -245,6 +245,46 @@ img {
     }
   }
 }
+#sidemenu_list_checkBox_men_selection {
+  &:checked ~ .sidemenu_list_grndchild_selection {
+    display: block;
+  }
+}
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
+// #sidemenu_list_checkBox_musique {
+//   &:checked ~ .sidemenu_list_child_musique {
+//     display: block;
+//   }
+// }
 .hamburger {
   .hamburger_parts {
     background-color: black;
