@@ -218,73 +218,7 @@ img {
     height: 55px;
     border-bottom: solid 1px #e9eaea;
   }
-  .sidemenu_list_child {
-    display: none;
-  }
-  .sidemenu_list_checkBox {
-    display: none;
-  }
-  #sidemenu_list_checkBox_men {
-    &:checked ~ .sidemenu_list_child_men {
-      display: block;
-    }
-  }
-  #sidemenu_list_checkBox_women {
-    &:checked ~ .sidemenu_list_child_women {
-      display: block;
-    }
-  }
-  #sidemenu_list_checkBox_cafe {
-    &:checked ~ .sidemenu_list_child_cafe {
-      display: block;
-    }
-  }
-  #sidemenu_list_checkBox_musique {
-    &:checked ~ .sidemenu_list_child_musique {
-      display: block;
-    }
-  }
 }
-#sidemenu_list_checkBox_men_selection {
-  &:checked ~ .sidemenu_list_grndchild_selection {
-    display: block;
-  }
-}
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
-// #sidemenu_list_checkBox_musique {
-//   &:checked ~ .sidemenu_list_child_musique {
-//     display: block;
-//   }
-// }
 .hamburger {
   .hamburger_parts {
     background-color: black;
