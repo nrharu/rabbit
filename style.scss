@@ -1,9 +1,9 @@
 $breakpoint-down: (
-  "xm": "(max-width: 744px)",
-  "sm": "(max-width: 590px)",
+  "xm": "(max-width: 590px)",
+  "sm": "(max-width: 744px)",
   "md": "(max-width: 1024px)",
 ) !default;
-@mixin mq-up($breakpoint: "xm") {
+@mixin mq-up($breakpoint: "sm") {
   @media #{map-get($breakpoint-down, $breakpoint)} {
     @content;
   }
@@ -70,6 +70,7 @@ img {
     width: 50px;
     height: 45px;
     display: none;
+
     @include mq-up(md) {
       display: flex;
     }
@@ -176,7 +177,6 @@ img {
     right: 0px;
     height: 100vh;
     width: calc(100% - 350px);
-    // opacity: 0;
   }
 }
 .sidemenu {
@@ -269,7 +269,6 @@ img {
   justify-content: space-between;
   font-size: 16px;
   padding: 15px 20px;
-  // transition-duration: 1s;
 }
 .sidemenu_child_item {
   padding: 8px 20px;
@@ -278,16 +277,15 @@ img {
   font-size: 16px;
   border-top: solid 1px #e9eaea;
   background-color: rgb(238, 238, 238);
-  // transition-duration: 5s;
 }
 .sidemenu_grandChild_item {
   padding: 8px 20px;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  // transition-duration: 1s;
   color: black;
   text-decoration: none;
+
   &:hover {
     text-decoration-line: underline;
   }
@@ -348,6 +346,7 @@ img {
   border-width: 0 1px;
   border-color: white;
   max-width: 100px;
+
   &:hover {
     border-color: #e9eaea;
     border-bottom-width: -1px;
@@ -577,7 +576,7 @@ img {
     flex-wrap: wrap;
     // display: none;
   }
-  @include mq-up(sm) {
+  @include mq-up(xm) {
     flex-direction: column;
     align-items: center;
     padding: 40px 35px 0 35px;
@@ -596,7 +595,7 @@ img {
     width: 272px;
     padding-top: 10px;
   }
-  @include mq-up(sm) {
+  @include mq-up(xm) {
     flex: 1;
     margin-bottom: 20px;
   }
@@ -613,7 +612,7 @@ img {
       height: 351px;
       width: 272px;
     }
-    @include mq-up(sm) {
+    @include mq-up(xm) {
       height: auto;
       width: 100%;
     }
@@ -635,7 +634,7 @@ img {
     @include mq-up {
       position: static;
     }
-    @include mq-up(sm) {
+    @include mq-up(xm) {
       position: absolute;
     }
   }
@@ -646,7 +645,7 @@ img {
     @include mq-up {
       display: none;
     }
-    @include mq-up(sm) {
+    @include mq-up(xm) {
       display: block;
     }
   }
@@ -884,11 +883,13 @@ img {
     border-color: #dedede;
   }
 }
-.information {
+.information_phone {
+  display: none;
   display: flex;
   justify-content: space-between;
   margin: 60px 0;
   @include mq-up {
+    display: block;
     flex-direction: column;
   }
   .information_disabled_box {
