@@ -149,8 +149,6 @@ img {
     position: absolute;
     top: 55px;
     visibility: hidden;
-    animation-name: submenu_slideOut;
-    animation-duration: 0.3s;
     background-color: white;
     width: 350px;
     height: 100vh;
@@ -190,6 +188,36 @@ img {
   justify-content: space-between;
   width: 100%;
   border-bottom: solid 1px #e9eaea;
+}
+
+@keyframes sidemenu_accordion_child {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 33px;
+  }
+}
+@keyframes sidemenu_accordion_grandChild {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 30px;
+  }
+}
+.sidemenu_list[open] .sidemenu_child_item {
+  animation-name: sidemenu_accordion_child;
+  animation-duration: 0.2s;
+}
+
+.sidemenu_list_child[open] .sidemenu_grandChild_item {
+  animation-name: sidemenu_accordion_grandChild;
+  animation-duration: 0.2s;
 }
 
 .sidemenu_item {
@@ -845,20 +873,17 @@ img {
   }
 }
 
-@keyframes informationn_accordion_menu {
+@keyframes information_accordion_menu {
   0% {
     opacity: 0;
     height: 0;
   }
-  50% {
-    opacity: 0;
-    height: 200px;
-  }
   100% {
     opacity: 1;
+    height: 35px;
   }
 }
-.information_list[open] {
+.information_list[open] .information_list_content {
   animation-name: information_accordion_menu;
   animation-duration: 1s;
 }
