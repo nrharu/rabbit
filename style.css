@@ -127,6 +127,9 @@ img {
   animation-fill-mode: forwards;
 }
 
+.sidemenu_close_space {
+  display: none;
+}
 @media (max-width: 1024px) {
   .sidemenu_close_space {
     position: absolute;
@@ -805,6 +808,7 @@ img {
 .footer {
   margin: 0 60px;
   font-size: 12px;
+  position: relative;
 }
 @media (max-width: 744px) {
   .footer {
@@ -830,6 +834,34 @@ img {
     flex-direction: column;
   }
 }
+.information .information_disabled_box {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+}
+@media (max-width: 744px) {
+  .information .information_disabled_box {
+    display: none;
+  }
+}
+
+@keyframes informationn_accordion_menu {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    height: 200px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.information_list[open] {
+  animation-name: information_accordion_menu;
+  animation-duration: 1s;
+}
 
 .information_list {
   width: 100%;
@@ -837,6 +869,7 @@ img {
 @media (max-width: 744px) {
   .information_list {
     border-bottom: solid 1px #dedede;
+    transition: 1s;
   }
 }
 .information_list + .information_list {
@@ -848,15 +881,9 @@ img {
   }
 }
 @media (max-width: 744px) {
-  .information_list .information_list_header {
-    justify-content: space-between;
-    padding-right: 15px;
-    padding-left: 15px;
-    height: 45px;
+  .information_list .information_list_item_backgroundColor {
+    background-color: #f8f2e9;
   }
-}
-.information_list .information_list_item_backgroundColor {
-  background-color: #f8f2e9;
 }
 .information_list .information_list_item {
   white-space: nowrap;
@@ -877,10 +904,16 @@ img {
 .information_list .information_list_item:first-child {
   border-bottom: solid 1px #dedede;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 @media (max-width: 744px) {
   .information_list .information_list_item:first-child {
     border-width: 0;
+    margin: 0;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 45px;
   }
 }
 .information_list .information_list_item .information_list_icon {
