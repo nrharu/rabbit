@@ -169,12 +169,14 @@ img {
   // }
 }
 .sidemenu_close_space {
+  display: none;
   @include mq-up(md) {
     position: absolute;
     top: 55px;
     right: 0px;
     height: 100vh;
     width: calc(100% - 350px);
+    // opacity: 0;
   }
 }
 .sidemenu {
@@ -777,6 +779,7 @@ img {
 .footer {
   margin: 0 60px;
   font-size: 12px;
+  position: relative;
   @include mq-up {
     margin: 0;
   }
@@ -795,29 +798,50 @@ img {
   @include mq-up {
     flex-direction: column;
   }
+  .information_disabled_box {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    @include mq-up {
+      display: none;
+    }
+  }
+}
+@keyframes informationn_accordion_menu {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    height: 200px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.information_list[open] {
+  animation-name: information_accordion_menu;
+  animation-duration: 1s;
 }
 .information_list {
   width: 100%;
   @include mq-up {
     border-bottom: solid 1px #dedede;
-    // padding-right: 40px;
+    transition: 1s;
   }
+  // > .information_list[open] {
+  // }
   + .information_list {
     margin-left: 40px;
     @include mq-up {
       margin-left: 0;
     }
   }
-  .information_list_header {
-    @include mq-up {
-      justify-content: space-between;
-      padding-right: 15px;
-      padding-left: 15px;
-      height: 45px;
-    }
-  }
   .information_list_item_backgroundColor {
-    background-color: rgb(248, 242, 233);
+    @include mq-up {
+      background-color: rgb(248, 242, 233);
+    }
   }
   .information_list_item {
     white-space: nowrap;
@@ -835,9 +859,15 @@ img {
     &:first-child {
       border-bottom: solid 1px #dedede;
       padding-bottom: 5px;
+      margin-bottom: 10px;
       @include mq-up {
         // padding: 0;
         border-width: 0;
+        margin: 0;
+        justify-content: space-between;
+        padding-right: 15px;
+        padding-left: 15px;
+        height: 45px;
       }
     }
     .information_list_icon {
