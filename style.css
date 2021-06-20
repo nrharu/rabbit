@@ -24,7 +24,6 @@ img {
 .body {
   width: 100vw;
   margin: 0 auto;
-  max-width: 1400px;
 }
 
 .header {
@@ -501,12 +500,11 @@ img {
 }
 
 .main {
-  padding-top: 87px;
-  margin: 0 20px;
+  padding-top: 81px;
 }
 @media (max-width: 1024px) {
   .main {
-    padding-top: 56px;
+    padding-top: 55px;
   }
 }
 
@@ -536,9 +534,14 @@ img {
   display: block;
 }
 
+.maxWidth_box {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .product {
   display: flex;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 @media (max-width: 744px) {
   .product {
