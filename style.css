@@ -78,98 +78,17 @@ img {
   }
 }
 
-@keyframes sidemenu_slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-375px);
-  }
-  13% {
-    opacity: 0.125;
-    transform: translateX(-328.125px);
-  }
-  25% {
-    opacity: 0.25;
-    transform: translateX(-281.25px);
-  }
-  38% {
-    opacity: 0.375;
-    transform: translateX(-234.375px);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateX(-187.5px);
-  }
-  63% {
-    opacity: 0.625;
-    transform: translateX(-140.625px);
-  }
-  75% {
-    opacity: 0.75;
-    transform: translateX(-93.75px);
-  }
-  88% {
-    opacity: 0.875;
-    transform: translateX(-46.875px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes hamburger_parts_transition_1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes hamburger_parts_transition_2 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes hamburger_parts_transition_3 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY();
-  }
-}
 #hamburger_checkbox {
   display: none;
 }
-#hamburger_checkbox:checked ~ .sidemenu {
-  visibility: visible;
-  animation-name: sidemenu_slideIn;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
+#hamburger_checkbox:checked ~ .sidemenu_wrap {
+  width: 700px;
+  transition-duration: 0.3s;
+  transition: all 300ms 0s ease;
+  opacity: 1;
 }
 #hamburger_checkbox:checked ~ .sidemenu_close_space {
   display: block;
-}
-#hamburger_checkbox:checked ~ .hamburger_parts_1 {
-  animation-name: hamburger_parts_transition_1;
-  animation-duration: 1s;
-}
-#hamburger_checkbox:checked ~ .hamburger_parts_2 {
-  display: none;
-  animation-name: hamburgur_parts_transition_2;
-  animation-duration: 1s;
-}
-#hamburger_checkbox:checked ~ .hamburger_parts_3 {
-  animation-name: hamburgur_parts_transition_3;
-  animation-duration: 1s;
 }
 
 .sidemenu_close_space {
@@ -185,20 +104,25 @@ img {
   }
 }
 
-.sidemenu {
-  display: none;
+.sidemenu_wrap {
+  opacity: 0;
 }
 @media (max-width: 1024px) {
-  .sidemenu {
-    display: block;
+  .sidemenu_wrap {
     position: absolute;
+    left: -350px;
+    display: flex;
+    justify-content: flex-end;
     top: 55px;
-    visibility: hidden;
     background-color: white;
     width: 350px;
     height: 100vh;
     overflow: auto;
   }
+}
+
+.sidemenu {
+  width: 350px;
 }
 .sidemenu .sidemenu_seachBox_wrap {
   width: 100%;
@@ -888,7 +812,7 @@ img {
 
 .shopContact {
   display: flex;
-  width: 100%;
+  width: calc(100vw - 40px);
   margin: 70px 20px 40px 20px;
 }
 @media (max-width: 744px) {
@@ -902,7 +826,7 @@ img {
 .login {
   font-size: 12px;
   padding-bottom: 10px;
-  width: calc((100% - 40px) * 0.5);
+  width: 50%;
 }
 .login .login_header {
   display: flex;
@@ -957,7 +881,7 @@ img {
 }
 
 .sns {
-  width: calc((100% - 40px) * 0.5);
+  width: 50%;
 }
 @media (max-width: 744px) {
   .sns {
