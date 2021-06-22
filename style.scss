@@ -24,7 +24,7 @@ li {
 }
 img {
   max-width: 100%;
-  width: 100%;
+  // width: 100%;
   height: auto;
 }
 .body {
@@ -731,7 +731,6 @@ img {
 }
 .shopContact {
   display: flex;
-  width: calc(100vw - 40px);
   margin: 70px 0 40px 0;
   @include mq-up {
     padding: 20px;
@@ -849,6 +848,7 @@ img {
     .sns_icon_cloud {
       width: 92%;
       height: 36px;
+      max-width: 108px;
     }
   }
 }
