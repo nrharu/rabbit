@@ -88,9 +88,6 @@ img {
   display: block;
 }
 
-.sidemenu_close_space {
-  display: none;
-}
 @media (max-width: 1024px) {
   .sidemenu_close_space {
     position: absolute;
@@ -120,8 +117,6 @@ img {
 }
 
 .sidemenu_open {
-  opacity: 0;
-  display: none;
   transition: transform 300ms ease, opacity 300ms ease;
 }
 @media (max-width: 1024px) {
@@ -165,7 +160,7 @@ img {
   width: 16px;
 }
 
-.sidemenu_list {
+.js_sidemenu_list {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,12 +189,12 @@ img {
     height: 30px;
   }
 }
-.sidemenu_list[open] .sidemenu_child_item {
+.js_sidemenu_list[open] .sidemenu_child_item {
   animation-name: sidemenu_accordion_child;
   animation-duration: 0.2s;
 }
 
-.sidemenu_list[open] .sidemenu_icon_child {
+.js_sidemenu_list[open] .sidemenu_icon_child {
   transform: rotate(90deg);
 }
 
@@ -398,6 +393,8 @@ img {
 .button_searchbox_wrap_open {
   position: absolute;
   visibility: visible;
+  animation-name: button_searchbox_animation;
+  animation-duration: 0.4s;
   width: 100vw;
   height: 80px;
   background-color: white;

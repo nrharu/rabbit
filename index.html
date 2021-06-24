@@ -50,14 +50,13 @@
     <link rel="img" href="images/youtube.svg" />
     <link rel="img" href="images/spotify.svg" />
     <title>maison kittsune 模写</title>
-    <script src="main.js"></script>
   </head>
   <body class="body">
     <header class="header">
       <div class="fixedHeader">
-        <input type="checkbox" id="hamburger_checkbox" />
-        <label class="sidemenu_close_space" for="hamburger_checkbox"></label>
-        <ul class="sidemenu">
+        <!-- <input type="checkbox" id="hamburger_checkbox" /> -->
+        <label id="js_sidemenu_close_space"></label>
+        <ul class="sidemenu" id="js_sidemenu">
           <li class="sidemenu_seachBox_wrap">
             <img
               src="images/musi.jpeg"
@@ -66,7 +65,7 @@
             />
             <input type="search" class="sidemenu_search" placeholder="検索" />
           </li>
-          <details class="sidemenu_list">
+          <details class="js_sidemenu_list">
             <summary class="sidemenu_item">
               <p>メンズ</p>
               <img
@@ -156,7 +155,7 @@
               <a href="#" class="sidemenu_grandChild_item">KHROMIS</a>
             </details>
           </details>
-          <details class="sidemenu_list">
+          <details class="js_sidemenu_list">
             <summary class="sidemenu_item">
               <p>レディース</p>
               <img
@@ -247,7 +246,7 @@
               <a href="#" class="sidemenu_grandChild_item">KHROMIS</a>
             </details>
           </details>
-          <details class="sidemenu_list">
+          <details class="js_sidemenu_list">
             <summary class="sidemenu_item">
               <p>CAFE</p>
               <img
@@ -320,7 +319,7 @@
               <a href="#" class="sidemenu_grandChild_item">beome a frachise</a>
             </details>
           </details>
-          <details class="sidemenu_list">
+          <details class="js_sidemenu_list">
             <summary class="sidemenu_item">
               <p>MUSIQUE</p>
               <img
@@ -359,7 +358,7 @@
               <a href="#" class="sidemenu_grandChild_item">Agenda</a>
             </details>
           </details>
-          <details class="sidemenu_list">
+          <details class="js_sidemenu_list">
             <summary class="sidemenu_item">
               <p>EVENTS</p>
               <img
@@ -371,7 +370,7 @@
           </details>
         </ul>
         <label class="hamburger_wrapper" for="hamburger_checkbox">
-          <ul class="hamburger">
+          <ul class="hamburger" id="js_hamburger">
             <li class="hamburger_parts hamburger_parts_1"></li>
             <li class="hamburger_parts hamburger_parts_2"></li>
             <li class="hamburger_parts hamburger_parts_3"></li>
@@ -568,10 +567,11 @@
               class="button_list button_list-disabled"
               for="button_search_checkbox"
               name="searchbox_open"
+              id="js-searchbox-open"
             >
               <!-- <input type="checkbox" id="button_search_checkbox" /> -->
               <img src="images/musi.jpeg" alt="虫眼鏡" class="button_icon" />
-              <div class="button_searchbox_wrap">
+              <div class="button_searchbox_wrap" id="js-button-searchbox-wrap">
                 <img
                   src="images/musi.jpeg"
                   alt="虫眼鏡"
@@ -998,5 +998,6 @@
         <small class="copyright">@MAISON KITSUNE</small>
       </footer>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
