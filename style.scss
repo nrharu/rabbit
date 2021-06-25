@@ -64,8 +64,8 @@ img {
   .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     width: 50px;
     height: 45px;
     display: none;
@@ -222,6 +222,10 @@ img {
     background-color: black;
     height: 2px;
     width: 30px;
+    margin-left: 8.5px;
+    &:first-of-type {
+      margin-top: 12px;
+    }
     + .js_hamburger_parts {
       margin-top: 6px;
     }
@@ -262,7 +266,6 @@ img {
   }
 }
 .js_hamburger_parts_1 {
-  // transform-origin: center center;
   transform-origin: center center;
   animation-name: hamburger_parts_down;
   animation-duration: 0.6s;
@@ -275,11 +278,57 @@ img {
 }
 .js_hamburger_parts_3 {
   transform-origin: center center;
-  // transform-origin: center center;
   animation-name: hamburger_parts_up;
   animation-duration: 0.6s;
   transform: rotate(45deg);
 }
+@keyframes hamburger_parts_down_reverse {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes hamburger_parts_disabled_reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hamburger_parts_up_reverse {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.js_hamburger_parts_1_reverse {
+  animation-name: hamburger_parts_down_reverse;
+  animation-duration: 0.6s;
+  animation-direction: reverse;
+}
+.js_hamburger_parts_2_reverse {
+  animation-name: hamburger_parts_disabled_reverse;
+  animation-duration: 0.6s;
+  opacity: 1;
+  animation-direction: reverse;
+}
+.js_hamburger_parts_3_reverse {
+  animation-direction: reverse;
+  animation-name: hamburger_parts_up_reverse;
+  animation-duration: 0.6s;
+}
+
 .headerItems {
   width: 50%;
   height: 100%;
