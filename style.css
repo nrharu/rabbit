@@ -77,17 +77,6 @@ img {
   }
 }
 
-#hamburger_checkbox {
-  display: none;
-}
-#hamburger_checkbox:checked ~ .sidemenu {
-  transform: translateX(0);
-  opacity: 1;
-}
-#hamburger_checkbox:checked ~ .sidemenu_close_space {
-  display: block;
-}
-
 @media (max-width: 1024px) {
   .sidemenu_close_space {
     position: absolute;
@@ -235,13 +224,63 @@ img {
   text-decoration-line: underline;
 }
 
-.hamburger .hamburger_parts {
+.hamburger .js_hamburger_parts {
   background-color: black;
   height: 2px;
   width: 30px;
 }
-.hamburger .hamburger_parts + .hamburger_parts {
-  margin-top: 5px;
+.hamburger .js_hamburger_parts + .js_hamburger_parts {
+  margin-top: 6px;
+}
+
+@keyframes hamburger_parts_down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes hamburger_parts_disabled {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hamburger_parts_up {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.js_hamburger_parts_1 {
+  transform-origin: center center;
+  animation-name: hamburger_parts_down;
+  animation-duration: 0.6s;
+  transform: rotate(-45deg);
+}
+
+.js_hamburger_parts_2 {
+  animation-name: hamburger_parts_disabled;
+  animation-duration: 0.6s;
+  opacity: 0;
+}
+
+.js_hamburger_parts_3 {
+  transform-origin: center center;
+  animation-name: hamburger_parts_up;
+  animation-duration: 0.6s;
+  transform: rotate(45deg);
 }
 
 .headerItems {
@@ -465,15 +504,6 @@ img {
     transition: translateY(81px);
   }
 }
-#button_search_checkbox {
-  display: none;
-}
-#button_search_checkbox:checked ~ .button_searchbox_wrap {
-  visibility: visible;
-  animation-name: button_searchbox_animation;
-  animation-duration: 0.4s;
-}
-
 .button_wrapper {
   display: flex;
 }
@@ -856,6 +886,7 @@ img {
 .login {
   font-size: 12px;
   padding-bottom: 10px;
+  padding-left: 20px;
   width: 50%;
 }
 .login .login_header {
