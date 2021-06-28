@@ -32,10 +32,8 @@ sidemenu_close.onclick = () => {
 };
 const sidemenu_lists = document.getElementsByClassName("sidemenu_item");
 // リストをまとめてとってくる
-
 // 配列風のなにかを配列にする
 const sidemenu_lists_array = Array.from(sidemenu_lists);
-
 // 配列にした `js_sidemenu_class` を　class に持つ要素を `forEach` で回す
 sidemenu_lists_array.forEach((list) => {
   // どれかの要素がクリックされたことを検知する
@@ -50,13 +48,10 @@ sidemenu_lists_array.forEach((list) => {
     });
   });
 });
-
-// let x = sidemenu_list.getAttribute;
-// const new_sidemenu_list = sidemenu_list.filter((n) => n !== x);
-// sidemenu_list[x].onclick = () => {
-//   sidemenu_list[new_sidemenu_list].removeAttribute("open");
-// };
-
+const sidemenu_child_item = document.getElementById("js_sidemenu_child_item");
+sidemenu_lists.onclick = () => {
+  sidemenu_child_item.classList.toggle("sidemenu_child_item_open");
+};
 const information_lists = document.getElementsByClassName("information_list");
 
 // const information_lists_array = Array.from(information_lists);
