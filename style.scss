@@ -177,10 +177,10 @@ img {
     height: 30px;
   }
 }
-// .js_sidemenu_list[open] .sidemenu_child_item {
-//   animation-name: sidemenu_accordion_child;
-//   animation-duration: 0.2s;
-// }
+.js_sidemenu_list[open] .sidemenu_child_item {
+  animation-name: sidemenu_accordion_child;
+  animation-duration: 0.2s;
+}
 .js_sidemenu_list[open] .sidemenu_icon_child {
   transform: rotate(90deg);
 }
@@ -197,10 +197,10 @@ img {
   font-size: 16px;
   padding: 15px 20px;
 }
-.sidemenu_child_item_open {
-  animation-name: sidemenu_accordion_child;
-  animation-duration: 0.2s;
-}
+// .sidemenu_child_item_open {
+//   animation-name: sidemenu_accordion_child;
+//   animation-duration: 0.2s;
+// }
 .sidemenu_child_item {
   padding: 8px 20px;
   display: flex;

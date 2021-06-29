@@ -23,13 +23,20 @@ const sidemenu_open = () => {
   sidemenu.classList.toggle("sidemenu");
   sidemenu.classList.toggle("sidemenu_open");
   sidemenu_close.classList.toggle("sidemenu_close_space");
-  hamburger_parts[0].classList.toggle("js_hamburger_parts_1");
-  hamburger_parts[1].classList.toggle("js_hamburger_parts_2");
-  hamburger_parts[2].classList.toggle("js_hamburger_parts_3");
-  hamburger_parts[0].classList.toggle("js_hamburger_parts_1_reverse");
-  hamburger_parts[1].classList.toggle("js_hamburger_parts_2_reverse");
-  hamburger_parts[2].classList.toggle("js_hamburger_parts_3_reverse");
+  for (i = 0; i < hamburger_wrap.length; i++)
+    hamburger_parts[i].classList.toggle(`js_hamburger_parts_${i + 1}`);
+  hamburger_parts[i].classList.toggle(`js_hamburger_parts_${i + 1}_reverse`);
+
+  // hamburger_parts[0].classList.toggle("js_hamburger_parts_1");
+  // hamburger_parts[1].classList.toggle("js_hamburger_parts_2");
+  // hamburger_parts[2].classList.toggle("js_hamburger_parts_3");
+  // hamburger_parts[0].classList.toggle("js_hamburger_parts_1_reverse");
+  // hamburger_parts[1].classList.toggle("js_hamburger_parts_2_reverse");
+  // hamburger_parts[2].classList.toggle("js_hamburger_parts_3_reverse");
 };
+for (i = 0; i < hamburger_wrap; i++)
+  hamburger_parts[i].classList.toggle(`js_hamburger_parts_${i + 1}`);
+hamburger_parts[i].classList.toggle(`js_hamburger_parts_${i + 1}_reverse`);
 
 hamburger_wrap.onclick = () => {
   sidemenu_open();
@@ -74,3 +81,8 @@ handleAccordion("js_sidemenu_list");
  * ドロワー内のアコーディオン子階層
  */
 handleAccordion("sidemenu_list_child");
+
+/**
+ * footerのアコーディオン
+ */
+handleAccordion("information_list");
