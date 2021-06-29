@@ -532,14 +532,20 @@
         </div>
         <div class="button">
           <ul class="button_wrapper">
-            <label
+            <div
               class="button_list button_list-disabled"
               name="searchbox_open"
               id="js_searchbox_open"
             >
-              <!-- <input type="checkbox" id="button_search_checkbox" /> -->
-              <img src="images/musi.jpeg" alt="虫眼鏡" class="button_icon" />
-              <div class="button_searchbox_wrap" id="js_button_searchbox_wrap">
+              <button id="js_button_open_icon">
+                <!-- <input type="checkbox" id="button_search_checkbox" /> -->
+                <img src="images/musi.jpeg" alt="虫眼鏡" class="button_icon" />
+              </button>
+              <div
+                class="js_button_searchbox_wrap"
+                id="js_button_searchbox_wrap"
+                onclick="event.cancelBubble=true"
+              >
                 <img
                   src="images/musi.jpeg"
                   alt="虫眼鏡"
@@ -550,15 +556,18 @@
                   placeholder="検索"
                   class="button_searchbox"
                 />
-                <label class="button_searchbox_close_icon_wrap">
+                <button
+                  class="button_searchbox_close_icon_wrap"
+                  id="js_searchbox_close_button"
+                >
                   <img
                     src="images/close.png"
                     alt="sidemenu_close_space"
                     class="button_searchbox_close_icon"
                   />
-                </label>
+                </button>
               </div>
-            </label>
+            </div>
             <li class="button_list button_list-disabled">
               <p class="button_cepalate"></p>
             </li>
