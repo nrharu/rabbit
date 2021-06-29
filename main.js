@@ -40,28 +40,37 @@ sidemenu_close.onclick = () => {
 };
 
 /**
- * ドロワー内のアコーディオン親階層
+ * アコーディオンの他を閉じる関数
  */
-
-// リストをまとめてとってくる
-const sidemenu_lists = document.getElementsByClassName("js_sidemenu_list");
-// 配列風のなにかを配列にする
-const sidemenu_lists_array = Array.from(sidemenu_lists);
-// 配列にした `js_sidemenu_class` を　class に持つ要素を `forEach` で回す
-sidemenu_lists_array.forEach((list) => {
-  // どれかの要素がクリックされたことを検知する
-  list.addEventListener("click", (clicked_sidemenu_list) => {
-    // リストの配列から，クリックされたもの以外を抜き出して配列を作り直す
-    const other_lists = sidemenu_lists_array.filter(
-      (list) => list !== clicked_sidemenu_list
-    );
-    // クリックされたもの以外の配列の　`open` 属性を削除する
-    other_lists.forEach((other_list) => {
-      other_list.removeAttribute("open");
+const handleAccordion = (targetClassName) => {
+  // リストをまとめてとってくる
+  const sidemenu_lists = document.getElementsByClassName(targetClassName);
+  // 配列風のなにかを配列にする
+  const sidemenu_lists_array = Array.from(sidemenu_lists);
+  // 配列にした `js_sidemenu_class` を　class に持つ要素を `forEach` で回す
+  sidemenu_lists_array.forEach((list) => {
+    // どれかの要素がクリックされたことを検知する
+    list.addEventListener("toggle", () => {
+      if (list.open) {
+        // リストの配列から，クリックされたもの以外を抜き出して配列を作り直す
+        const other_lists = sidemenu_lists_array.filter(
+          (other_lists) => list !== other_lists
+        );
+        // クリックされたもの以外の配列の　`open` 属性を削除する
+        other_lists.forEach((other_list) => {
+          other_list.removeAttribute("open");
+        });
+      }
     });
   });
-});
+};
+
+/**
+ * ドロワー内のアコーディオン親階層
+ */
+handleAccordion("js_sidemenu_list");
 
 /**
  * ドロワー内のアコーディオン子階層
  */
+handleAccordion("sidemenu_list_child");
