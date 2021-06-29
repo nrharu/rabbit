@@ -465,7 +465,7 @@ img {
   }
 }
 
-.button_searchbox_wrap {
+.js_button_searchbox_wrap {
   position: absolute;
   visibility: hidden;
   width: 100vw;
@@ -477,10 +477,20 @@ img {
   align-items: center;
 }
 @media (max-width: 1024px) {
-  .button_searchbox_wrap {
+  .js_button_searchbox_wrap {
     top: 55px;
     height: 50px;
   }
+}
+
+#js_button_open_icon {
+  border: none;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  background-color: white;
+  height: 100%;
+  width: 100%;
 }
 
 .button_searchbox_wrap_open {
@@ -494,6 +504,7 @@ img {
   border-width: 0;
   height: 100%;
   padding-left: 20px;
+  outline: none;
 }
 .button_searchbox::placeholder {
   font-size: 20px;
@@ -506,6 +517,11 @@ img {
 
 .button_searchbox_close_icon_wrap {
   padding-right: 20px;
+  border: none;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  background-color: white;
 }
 .button_searchbox_close_icon_wrap .button_searchbox_close_icon {
   width: 25px;
