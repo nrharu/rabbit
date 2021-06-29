@@ -48,10 +48,14 @@ sidemenu_lists_array.forEach((list) => {
     });
   });
 });
-const sidemenu_child_item = document.getElementById("js_sidemenu_child_item");
-sidemenu_lists.onclick = () => {
-  sidemenu_child_item.classList.toggle("sidemenu_child_item_open");
-};
+const sidemenu_child_item = document.getElementsByClassName(
+  "js_sidemenu_child_item"
+);
+for (var i = 0; i < sidemenu_child_item.length; ++i)
+  for (var n = 0; n < sidemenu_lists.length; ++i)
+    sidemenu_lists[n].onclick = () => {
+      sidemenu_child_item[i].classList.toggle("sidemenu_child_item_open");
+    };
 const information_lists = document.getElementsByClassName("information_list");
 
 // const information_lists_array = Array.from(information_lists);
