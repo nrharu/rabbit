@@ -68,6 +68,7 @@ img {
   align-items: center;
   width: 50px;
   height: 45px;
+  cursor: pointer;
   display: none;
 }
 @media (max-width: 1024px) {
@@ -202,6 +203,7 @@ img {
   justify-content: space-between;
   font-size: 16px;
   padding: 15px 20px;
+  cursor: pointer;
 }
 
 .sidemenu_child_item {
@@ -211,6 +213,7 @@ img {
   font-size: 16px;
   border-top: solid 1px #e9eaea;
   background-color: #eeeeee;
+  cursor: pointer;
 }
 
 .sidemenu_grandChild_item {
@@ -398,6 +401,7 @@ img {
   border-width: 0 1px;
   border-color: white;
   max-width: 100px;
+  cursor: pointer;
 }
 .navigation_item:hover {
   border-color: #e9eaea;
@@ -500,6 +504,7 @@ img {
   background-color: white;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .button_searchbox_wrap_open {
@@ -532,6 +537,7 @@ img {
   padding: 0;
   appearance: none;
   background-color: white;
+  cursor: pointer;
 }
 .button_searchbox_close_icon_wrap .button_searchbox_close_icon {
   width: 25px;
@@ -577,6 +583,7 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 @media (max-width: 1024px) {
   .button_wrapper .button_list {
@@ -673,6 +680,7 @@ img {
   bottom: 10%;
   left: 25%;
   font-size: 14px;
+  cursor: pointer;
 }
 @media (max-width: 744px) {
   .mainvisual_label .mainvisual_label-right {
@@ -686,6 +694,7 @@ img {
   bottom: 10%;
   right: 25%;
   font-size: 14px;
+  cursor: pointer;
 }
 @media (max-width: 744px) {
   .mainvisual_label .mainvisual_label-left {
@@ -772,6 +781,7 @@ img {
 .product_list .product_tag {
   border-bottom: solid 3px black;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .product_img_wrap .product_img {
@@ -833,6 +843,7 @@ img {
 .recommend_list .recommend_list_header {
   border-bottom: solid 3px black;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .recommend_img_wrap:before {
@@ -887,6 +898,7 @@ img {
   padding-top: 10px;
   border-bottom: solid 3px black;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .news_img_wrap .news_img {
@@ -955,6 +967,11 @@ img {
   padding-left: 20px;
   width: 50%;
 }
+@media (max-width: 744px) {
+  .login {
+    padding-bottom: 40px;
+  }
+}
 .login .login_header {
   display: flex;
   flex-direction: column;
@@ -977,6 +994,7 @@ img {
   justify-content: center;
   transition-duration: 0.6s;
   align-items: center;
+  cursor: pointer;
 }
 .login .login_link_wrap:hover {
   background-color: black;
@@ -986,25 +1004,35 @@ img {
 .login_link_wrap:hover > .login_link {
   color: white;
 }
+.login_link_wrap:hover > .login_link_icon {
+  fill: white;
+}
+
+#js_login_link_icon_color {
+  fill: black;
+}
+
+.js_login_link_icon_color_hover {
+  fill: white;
+}
 
 .login_link {
+  margin-left: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 100%;
   height: 40px;
   text-decoration: none;
   font-size: 14px;
   text-align: center;
-  padding-left: 70px;
   color: black;
 }
-.login_link::after {
-  background-image: url(images/yazi.svg);
-  content: "";
-  height: 20px;
+
+.login_link_icon {
   width: 20px;
-  margin-left: 70px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .sns {
@@ -1034,6 +1062,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 @media (max-width: 744px) {
   .sns_list .sns_icon_wrap_cloud {
@@ -1051,6 +1080,7 @@ img {
   justify-content: center;
   height: 45px;
   width: 12%;
+  cursor: pointer;
 }
 @media (max-width: 744px) {
   .sns_list .sns_icon_wrap {
@@ -1106,6 +1136,9 @@ img {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+.information_list_item_pc:not(:first-child) {
+  cursor: pointer;
+}
 
 .information_list_pc {
   width: 100%;
@@ -1154,6 +1187,9 @@ img {
   transform: rotate(90deg);
 }
 
+.information_list {
+  cursor: pointer;
+}
 @media (max-width: 744px) {
   .information_list {
     border-bottom: solid 1px #dedede;
