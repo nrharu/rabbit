@@ -68,6 +68,7 @@ img {
     align-items: center;
     width: 50px;
     height: 45px;
+    cursor: pointer;
     display: none;
     @include mq-up(md) {
       display: flex;
@@ -198,6 +199,7 @@ img {
   justify-content: space-between;
   font-size: 16px;
   padding: 15px 20px;
+  cursor: pointer;
 }
 // .sidemenu_child_item_open {
 //   animation-name: sidemenu_accordion_child;
@@ -210,6 +212,7 @@ img {
   font-size: 16px;
   border-top: solid 1px #e9eaea;
   background-color: rgb(238, 238, 238);
+  cursor: pointer;
 }
 .sidemenu_grandChild_item {
   padding: 8px 20px;
@@ -386,6 +389,7 @@ img {
   border-width: 0 1px;
   border-color: white;
   max-width: 100px;
+  cursor: pointer;
   &:hover {
     border-color: #e9eaea;
     border-bottom-width: -1px;
@@ -485,6 +489,7 @@ img {
   background-color: white;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 .button_searchbox_wrap_open {
   visibility: visible;
@@ -514,6 +519,7 @@ img {
   padding: 0;
   appearance: none;
   background-color: white;
+  cursor: pointer;
   .button_searchbox_close_icon {
     width: 25px;
     height: 25px;
@@ -561,6 +567,7 @@ img {
     height: 80px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     @include mq-up(md) {
       height: 55px;
     }
@@ -647,6 +654,7 @@ img {
     bottom: 10%;
     left: 25%;
     font-size: 14px;
+    cursor: pointer;
     @include mq-up {
       padding: 5px 10px;
     }
@@ -658,6 +666,7 @@ img {
     bottom: 10%;
     right: 25%;
     font-size: 14px;
+    cursor: pointer;
     @include mq-up {
       padding: 5px 10px;
     }
@@ -728,6 +737,7 @@ img {
   .product_tag {
     border-bottom: solid 3px black;
     padding-top: 10px;
+    cursor: pointer;
   }
 }
 .product_img_wrap {
@@ -781,6 +791,7 @@ img {
   .recommend_list_header {
     border-bottom: solid 3px black;
     padding-top: 10px;
+    cursor: pointer;
   }
 }
 .recommend_img_wrap {
@@ -828,6 +839,7 @@ img {
     padding-top: 10px;
     border-bottom: solid 3px black;
     font-size: 14px;
+    cursor: pointer;
   }
 }
 .news_img_wrap {
@@ -895,6 +907,9 @@ img {
   padding-left: 20px;
   width: 50%;
   // width: calc((100vw - 40px) * 0.5);
+  @include mq-up {
+    padding-bottom: 40px;
+  }
   .login_header {
     display: flex;
     flex-direction: column;
@@ -916,6 +931,7 @@ img {
     justify-content: center;
     transition-duration: 0.6s;
     align-items: center;
+    cursor: pointer;
     &:hover {
       background-color: rgb(0, 0, 0);
       color: white;
@@ -926,28 +942,33 @@ img {
   > .login_link {
     color: white;
   }
-  // > .login_link::after {
-  //   fill: white;
-  // }
+  > .login_link_icon {
+    fill: white;
+  }
+}
+
+#js_login_link_icon_color {
+  fill: black;
+}
+.js_login_link_icon_color_hover {
+  fill: white;
 }
 .login_link {
+  margin-left: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 100%;
   height: 40px;
   text-decoration: none;
   font-size: 14px;
   text-align: center;
-  padding-left: 70px;
   color: black;
-  &::after {
-    background-image: url(images/yazi.svg);
-    content: "";
-    height: 20px;
-    width: 20px;
-    margin-left: 70px;
-  }
+}
+.login_link_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 .sns {
   // width: calc((100vw - 40px) * 0.5);
@@ -975,6 +996,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     @include mq-up {
       width: 14.2857143%;
     }
@@ -990,6 +1012,7 @@ img {
     justify-content: center;
     height: 45px;
     width: 12%;
+    cursor: pointer;
     @include mq-up {
       width: 14.2857143%;
     }
@@ -1035,6 +1058,9 @@ img {
     padding-bottom: 5px;
     margin-bottom: 10px;
   }
+  &:not(:first-child) {
+    cursor: pointer;
+  }
 }
 .information_list_pc {
   width: 100%;
@@ -1077,6 +1103,7 @@ img {
   transform: rotate(90deg);
 }
 .information_list {
+  cursor: pointer;
   @include mq-up {
     border-bottom: solid 1px #dedede;
     transition: 1s;
