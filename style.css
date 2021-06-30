@@ -127,11 +127,13 @@ img {
   border-bottom: solid 1px #e9eaea;
 }
 .sidemenu_seachBox_wrap input.sidemenu_search {
+  font-size: 100%;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   border: 0;
+  outline: none;
 }
 .sidemenu_seachBox_wrap input.sidemenu_search::placeholder {
   padding-left: 10px;
@@ -140,7 +142,7 @@ img {
 .sidemenu_seachBox_wrap .sidemenu_search_icon {
   width: 20px;
   height: 20px;
-  margin-left: 15px;
+  margin: 0 15px;
 }
 
 .sidemenu_icon {
@@ -402,7 +404,8 @@ img {
   border-bottom-width: -1px;
   z-index: 10;
 }
-.navigation_item:hover > .navigation_item_submenu_wrap {
+
+.navigation_item_hover:hover > .navigation_item_submenu_wrap {
   visibility: visible;
   border-style: solid;
   border-top-width: 1px;
@@ -439,9 +442,15 @@ img {
   visibility: hidden;
   display: flex;
 }
+.navigation_item_submenu_wrap:first-of-type {
+  padding-left: 50px;
+}
 .navigation_item_submenu_wrap .navigation_item_submenu {
   font-size: 100%;
-  padding: 40px 0 0 50px;
+  padding-top: 40px;
+}
+.navigation_item_submenu_wrap .navigation_item_submenu + .navigation_item_submenu {
+  padding-left: 150px;
 }
 
 .navigation_item_subitem + .navigation_item_subitem {
@@ -505,6 +514,7 @@ img {
   height: 100%;
   padding-left: 20px;
   outline: none;
+  font-size: 100%;
 }
 .button_searchbox::placeholder {
   font-size: 20px;
