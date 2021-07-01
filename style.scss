@@ -944,12 +944,8 @@ img {
   > .login_link {
     color: white;
   }
-  > .login_link_icon {
-    fill: white;
-  }
 }
-
-#js_login_link_icon_color {
+.login_link_icon {
   fill: black;
 }
 .js_login_link_icon_color_hover {
