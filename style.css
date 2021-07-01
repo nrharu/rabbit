@@ -1006,11 +1006,8 @@ img {
 .login_link_wrap:hover > .login_link {
   color: white;
 }
-.login_link_wrap:hover > .login_link_icon {
-  fill: white;
-}
 
-#js_login_link_icon_color {
+.login_link_icon {
   fill: black;
 }
 
