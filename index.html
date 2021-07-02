@@ -13,42 +13,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
     />
-    <link rel="img" href="images/img\ダウンロード (1).jpg" />
-    <link rel="img" href="images/img\ダウンロード.jpg" />
-    <link rel="img" href="images/img\uma0005-024.jpg" />
-    <link rel="img" href="images/img\pet_rabbit_img3.jpg" />
-    <link rel="img" href="images/img\p9004.jpg" />
-    <link rel="img" href="images/img\ant0051-039.jpg" />
-    <link rel="img" href="images/yazi.svg" />
-    <link rel="img" href="images/images.jpg" />
-    <link rel="img" href="images/musi.jpeg" />
-    <link rel="img" href="images/bag.jpeg" />
-    <link rel="img" href="images/person.png" />
-    <link rel="img" href="images/mainvisual_2.webp" />
-    <link rel="img" href="images/mainvisual_responsiv.webp" />
-    <link rel="img" href="images/product_1.webp" />
-    <link rel="img" href="images/product_2.webp" />
-    <link rel="img" href="images/product_3.webp" />
-    <link rel="img" href="images/product_4.webp" />
-    <link rel="img" href="images/product_5.webp" />
-    <link rel="img" href="images/recommend_1.webp" />
-    <link rel="img" href="images/recommend_2.webp" />
-    <link rel="img" href="images/news_1.webp" />
-    <link rel="img" href="images/news_2.jpg" />
-    <link rel="img" href="images/news_3.webp" />
-    <link rel="img" href="images/service_1.png" />
-    <link rel="img" href="images/service_2.png" />
-    <link rel="img" href="images/service_3.png" />
-    <link rel="img" href="images/close.png" />
-    <link rel="img" href="images/bell.png" />
-    <link rel="img" href="images/logo.svg" />
-    <link rel="img" href="images/line.png" />
-    <link rel="img" href="images/instagram.svg" />
-    <link rel="img" href="images/fasebook.svg" />
-    <link rel="img" href="images/twitter.svg" />
-    <link rel="img" href="images/cloud.svg" />
-    <link rel="img" href="images/youtube.svg" />
-    <link rel="img" href="images/spotify.svg" />
     <title>maison kittsune 模写</title>
   </head>
   <body class="body">
@@ -57,7 +21,7 @@
         <!-- <input type="checkbox" id="hamburger_checkbox" /> -->
         <label id="js_sidemenu_close_space"></label>
         <ul class="sidemenu" id="js_sidemenu">
-          <li class="sidemenu_seachBox_wrap">
+          <li class="sidemenu_searchBox_wrap">
             <img
               src="images/musi.jpeg"
               alt="虫眼鏡"
@@ -377,8 +341,8 @@
         <label class="hamburger_wrapper">
           <ul class="hamburger" id="js_hamburger">
             <li class="js_hamburger_parts js_hamburger_parts_1_reverse"></li>
-            <li class="js_hamburger_parts js_hamburger_parts_2_reverse"></li>
-            <li class="js_hamburger_parts js_hamburger_parts_3_reverse"></li>
+            <!-- <li class="js_hamburger_parts js_hamburger_parts_2_reverse"></li>
+            <li class="js_hamburger_parts js_hamburger_parts_3_reverse"></li> -->
           </ul>
         </label>
         <div class="headerItems">
@@ -387,7 +351,7 @@
           </div>
           <nav class="navigation">
             <ul class="navigation_item_list">
-              <li class="navigation_item">
+              <li class="navigation_item navigation_item_hover">
                 <a href="#" class="navigation_item_hover">メンズ</a>
                 <div class="navigation_item_submenu_wrap">
                   <ul class="navigation_item_submenu">
@@ -403,7 +367,7 @@
                       パーマネントコレクション
                     </li>
                     <li class="navigation_item_subitem">
-                      ACIDE Maison Kitsuné
+                      s ACIDE Maison Kitsuné
                     </li>
                     <li class="navigation_item_subitem">Café Kitsuné</li>
                   </ul>
@@ -445,7 +409,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="navigation_item">
+              <li class="navigation_item navigation_item_hover">
                 <a href="#" class="navigation_item_hover"> レディース</a>
                 <div class="navigation_item_submenu_wrap">
                   <ul class="navigation_item_submenu">
@@ -501,7 +465,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="navigation_item">
+              <li class="navigation_item navigation_item_hover">
                 <a href="#" class="navigation_item_hover"> CAFE</a>
                 <div class="navigation_item_submenu_wrap">
                   <ul class="navigation_item_submenu">
@@ -539,7 +503,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="navigation_item">
+              <li class="navigation_item navigation_item_hover">
                 <a href="#" class="navigation_item_hover"> MUSIQUE</a>
                 <div class="navigation_item_submenu_wrap">
                   <ul class="navigation_item_submenu">
@@ -568,14 +532,19 @@
         </div>
         <div class="button">
           <ul class="button_wrapper">
-            <label
+            <div
               class="button_list button_list-disabled"
               name="searchbox_open"
               id="js_searchbox_open"
             >
-              <!-- <input type="checkbox" id="button_search_checkbox" /> -->
-              <img src="images/musi.jpeg" alt="虫眼鏡" class="button_icon" />
-              <div class="button_searchbox_wrap" id="js_button_searchbox_wrap">
+              <button id="js_button_open_icon">
+                <!-- <input type="checkbox" id="button_search_checkbox" /> -->
+                <img src="images/musi.jpeg" alt="虫眼鏡" class="button_icon" />
+              </button>
+              <div
+                class="js_button_searchbox_wrap"
+                id="js_button_searchbox_wrap"
+              >
                 <img
                   src="images/musi.jpeg"
                   alt="虫眼鏡"
@@ -586,15 +555,18 @@
                   placeholder="検索"
                   class="button_searchbox"
                 />
-                <label class="button_searchbox_close_icon_wrap">
+                <button
+                  class="button_searchbox_close_icon_wrap"
+                  id="js_searchbox_close_button"
+                >
                   <img
                     src="images/close.png"
                     alt="sidemenu_close_space"
                     class="button_searchbox_close_icon"
                   />
-                </label>
+                </button>
               </div>
-            </label>
+            </div>
             <li class="button_list button_list-disabled">
               <p class="button_cepalate"></p>
             </li>
@@ -765,8 +737,32 @@
         <div class="shopContact">
           <div class="login">
             <p class="login_header">ニュースレターに登録する</p>
-            <div class="login_link_wrap">
+            <div class="login_link_wrap" id="js_login_link_wrap">
               <a href="#" class="login_link">登録する</a>
+              <!-- <img
+                src="images/yazi.svg"
+                alt="allowicon"
+                class="login_link_icon"
+              /> -->
+              <div class="login_link_icon">
+                <svg
+                  version="1.1"
+                  id="_x32_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <polygon
+                      id="js_login_link_icon_color"
+                      points="163.916,0 92.084,71.822 276.258,255.996 92.084,440.178 163.916,512 419.916,255.996 	"
+                    ></polygon>
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
           <div class="sns">
@@ -804,8 +800,8 @@
                 <img src="images/spotify.svg" alt="spotify" class="sns_icon" />
               </li>
               <li class="sns_icon_separation"></li>
-              <li class="sns_icon_wrap_cloud">
-                <img src="images/line.png" alt="LINE" class="sns_icon_cloud" />
+              <li class="sns_icon_wrap_LINE">
+                <img src="images/line.png" alt="LINE" class="sns_icon_LINE" />
               </li>
             </ul>
           </div>
